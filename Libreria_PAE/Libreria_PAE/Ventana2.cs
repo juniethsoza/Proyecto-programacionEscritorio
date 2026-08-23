@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Libreria_PAE
 {
-    public partial class FrmSigiv : Form
+    public partial class Ventana2 : Form
     {
-        public FrmSigiv()
+        public Ventana2()
         {
             InitializeComponent();
-        }
-
-        private void FrmSgv_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
