@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Libreria_PAE
 {
-    public partial class frmSeguridad : Form
+    public partial class frmCatalogos : Form
     {
-        public frmSeguridad()
+        public frmCatalogos()
         {
             InitializeComponent();
         }
 
-        private void dgvGUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tbpCategoria_Click(object sender, EventArgs e)
         {
 
         }
