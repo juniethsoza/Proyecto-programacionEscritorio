@@ -72,54 +72,53 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbpProveedor = new System.Windows.Forms.TabPage();
-            this.tbpCliente = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtNombrePvr = new System.Windows.Forms.TextBox();
-            this.txtDireccionPvr = new System.Windows.Forms.TextBox();
-            this.txtTelefonoPvr = new System.Windows.Forms.TextBox();
-            this.txtCorreoPvr = new System.Windows.Forms.TextBox();
-            this.cmbProductoPvr = new System.Windows.Forms.ComboBox();
-            this.btnAgregarPvr = new System.Windows.Forms.Button();
-            this.btnGuardarPvr = new System.Windows.Forms.Button();
-            this.btnEliminarPvr = new System.Windows.Forms.Button();
-            this.btnCerrarPvr = new System.Windows.Forms.Button();
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
-            this.pcbAgregar = new System.Windows.Forms.PictureBox();
             this.clCodigoPvr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clProductoPvr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clProveedorPvr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpCliente = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtCodigoCl = new System.Windows.Forms.TextBox();
-            this.txtNombreCl = new System.Windows.Forms.TextBox();
-            this.txtApellidoCl = new System.Windows.Forms.TextBox();
-            this.txtTelefonoCl = new System.Windows.Forms.TextBox();
-            this.btnGuardarCl = new System.Windows.Forms.Button();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.btnEliminarCl = new System.Windows.Forms.Button();
+            this.btnCerrarPvr = new System.Windows.Forms.Button();
+            this.btnEliminarPvr = new System.Windows.Forms.Button();
+            this.btnGuardarPvr = new System.Windows.Forms.Button();
+            this.btnAgregarPvr = new System.Windows.Forms.Button();
+            this.cmbProductoPvr = new System.Windows.Forms.ComboBox();
+            this.txtCorreoPvr = new System.Windows.Forms.TextBox();
+            this.txtTelefonoPvr = new System.Windows.Forms.TextBox();
+            this.txtDireccionPvr = new System.Windows.Forms.TextBox();
+            this.txtNombrePvr = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbpCliente = new System.Windows.Forms.TabPage();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEliminarCl = new System.Windows.Forms.Button();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.clCodigoCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clNombreCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clApellidoCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTelefonoCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardarCl = new System.Windows.Forms.Button();
+            this.grpCliente = new System.Windows.Forms.GroupBox();
+            this.txtTelefonoCl = new System.Windows.Forms.TextBox();
+            this.txtApellidoCl = new System.Windows.Forms.TextBox();
+            this.txtNombreCl = new System.Windows.Forms.TextBox();
+            this.txtCodigoCl = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.tbcCatalogo.SuspendLayout();
             this.tbpCategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.tbpProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProducto)).BeginInit();
             this.tbpProveedor.SuspendLayout();
-            this.tbpCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAgregar)).BeginInit();
-            this.grpCliente.SuspendLayout();
+            this.tbpCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.grpCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcCatalogo
@@ -504,7 +503,7 @@
             // tbpProveedor
             // 
             this.tbpProveedor.BackColor = System.Drawing.Color.Thistle;
-            this.tbpProveedor.Controls.Add(this.pcbAgregar);
+            this.tbpProveedor.Controls.Add(this.button9);
             this.tbpProveedor.Controls.Add(this.dgvProveedor);
             this.tbpProveedor.Controls.Add(this.btnCerrarPvr);
             this.tbpProveedor.Controls.Add(this.btnEliminarPvr);
@@ -526,146 +525,6 @@
             this.tbpProveedor.Size = new System.Drawing.Size(937, 598);
             this.tbpProveedor.TabIndex = 2;
             this.tbpProveedor.Text = "Proveedor";
-            // 
-            // tbpCliente
-            // 
-            this.tbpCliente.BackColor = System.Drawing.Color.Thistle;
-            this.tbpCliente.Controls.Add(this.btnCerrar);
-            this.tbpCliente.Controls.Add(this.btnEliminarCl);
-            this.tbpCliente.Controls.Add(this.dgvCliente);
-            this.tbpCliente.Controls.Add(this.btnGuardarCl);
-            this.tbpCliente.Controls.Add(this.grpCliente);
-            this.tbpCliente.Location = new System.Drawing.Point(4, 32);
-            this.tbpCliente.Name = "tbpCliente";
-            this.tbpCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCliente.Size = new System.Drawing.Size(937, 598);
-            this.tbpCliente.TabIndex = 3;
-            this.tbpCliente.Text = "Cliente";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(33, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 23);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Nombre";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(33, 87);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 23);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Dirección";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(465, 36);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 23);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Teléfono";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(465, 92);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 23);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Correo";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(53, 189);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(235, 23);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Producto que suministra";
-            // 
-            // txtNombrePvr
-            // 
-            this.txtNombrePvr.Location = new System.Drawing.Point(143, 29);
-            this.txtNombrePvr.Name = "txtNombrePvr";
-            this.txtNombrePvr.Size = new System.Drawing.Size(273, 31);
-            this.txtNombrePvr.TabIndex = 5;
-            // 
-            // txtDireccionPvr
-            // 
-            this.txtDireccionPvr.Location = new System.Drawing.Point(143, 85);
-            this.txtDireccionPvr.Name = "txtDireccionPvr";
-            this.txtDireccionPvr.Size = new System.Drawing.Size(273, 31);
-            this.txtDireccionPvr.TabIndex = 6;
-            // 
-            // txtTelefonoPvr
-            // 
-            this.txtTelefonoPvr.Location = new System.Drawing.Point(577, 37);
-            this.txtTelefonoPvr.Name = "txtTelefonoPvr";
-            this.txtTelefonoPvr.Size = new System.Drawing.Size(273, 31);
-            this.txtTelefonoPvr.TabIndex = 7;
-            // 
-            // txtCorreoPvr
-            // 
-            this.txtCorreoPvr.Location = new System.Drawing.Point(577, 93);
-            this.txtCorreoPvr.Name = "txtCorreoPvr";
-            this.txtCorreoPvr.Size = new System.Drawing.Size(273, 31);
-            this.txtCorreoPvr.TabIndex = 8;
-            // 
-            // cmbProductoPvr
-            // 
-            this.cmbProductoPvr.FormattingEnabled = true;
-            this.cmbProductoPvr.Location = new System.Drawing.Point(294, 183);
-            this.cmbProductoPvr.Name = "cmbProductoPvr";
-            this.cmbProductoPvr.Size = new System.Drawing.Size(347, 31);
-            this.cmbProductoPvr.TabIndex = 9;
-            // 
-            // btnAgregarPvr
-            // 
-            this.btnAgregarPvr.BackColor = System.Drawing.Color.Purple;
-            this.btnAgregarPvr.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPvr.Location = new System.Drawing.Point(710, 173);
-            this.btnAgregarPvr.Name = "btnAgregarPvr";
-            this.btnAgregarPvr.Size = new System.Drawing.Size(140, 49);
-            this.btnAgregarPvr.TabIndex = 11;
-            this.btnAgregarPvr.Text = "Agregar";
-            this.btnAgregarPvr.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardarPvr
-            // 
-            this.btnGuardarPvr.BackColor = System.Drawing.Color.Purple;
-            this.btnGuardarPvr.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPvr.Location = new System.Drawing.Point(316, 250);
-            this.btnGuardarPvr.Name = "btnGuardarPvr";
-            this.btnGuardarPvr.Size = new System.Drawing.Size(174, 49);
-            this.btnGuardarPvr.TabIndex = 12;
-            this.btnGuardarPvr.Text = "Guardar";
-            this.btnGuardarPvr.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarPvr
-            // 
-            this.btnEliminarPvr.BackColor = System.Drawing.Color.Purple;
-            this.btnEliminarPvr.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarPvr.Location = new System.Drawing.Point(496, 250);
-            this.btnEliminarPvr.Name = "btnEliminarPvr";
-            this.btnEliminarPvr.Size = new System.Drawing.Size(174, 49);
-            this.btnEliminarPvr.TabIndex = 13;
-            this.btnEliminarPvr.Text = "Eliminar";
-            this.btnEliminarPvr.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarPvr
-            // 
-            this.btnCerrarPvr.BackColor = System.Drawing.Color.Purple;
-            this.btnCerrarPvr.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarPvr.Location = new System.Drawing.Point(676, 250);
-            this.btnCerrarPvr.Name = "btnCerrarPvr";
-            this.btnCerrarPvr.Size = new System.Drawing.Size(174, 49);
-            this.btnCerrarPvr.TabIndex = 14;
-            this.btnCerrarPvr.Text = "Cerrar";
-            this.btnCerrarPvr.UseVisualStyleBackColor = false;
             // 
             // dgvProveedor
             // 
@@ -699,17 +558,6 @@
             this.dgvProveedor.Size = new System.Drawing.Size(868, 226);
             this.dgvProveedor.TabIndex = 15;
             // 
-            // pcbAgregar
-            // 
-            this.pcbAgregar.BackColor = System.Drawing.Color.Thistle;
-            this.pcbAgregar.Image = global::Libreria_PAE.Properties.Resources.icons8_añadir_64;
-            this.pcbAgregar.Location = new System.Drawing.Point(647, 180);
-            this.pcbAgregar.Name = "pcbAgregar";
-            this.pcbAgregar.Size = new System.Drawing.Size(57, 32);
-            this.pcbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbAgregar.TabIndex = 16;
-            this.pcbAgregar.TabStop = false;
-            // 
             // clCodigoPvr
             // 
             this.clCodigoPvr.HeaderText = "Código";
@@ -728,98 +576,167 @@
             this.clProveedorPvr.MinimumWidth = 8;
             this.clProveedorPvr.Name = "clProveedorPvr";
             // 
-            // grpCliente
+            // btnCerrarPvr
             // 
-            this.grpCliente.Controls.Add(this.txtTelefonoCl);
-            this.grpCliente.Controls.Add(this.txtApellidoCl);
-            this.grpCliente.Controls.Add(this.txtNombreCl);
-            this.grpCliente.Controls.Add(this.txtCodigoCl);
-            this.grpCliente.Controls.Add(this.label18);
-            this.grpCliente.Controls.Add(this.label17);
-            this.grpCliente.Controls.Add(this.label16);
-            this.grpCliente.Controls.Add(this.label15);
-            this.grpCliente.Location = new System.Drawing.Point(28, 32);
-            this.grpCliente.Name = "grpCliente";
-            this.grpCliente.Size = new System.Drawing.Size(860, 208);
-            this.grpCliente.TabIndex = 0;
-            this.grpCliente.TabStop = false;
-            this.grpCliente.Text = "Datos generales";
+            this.btnCerrarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnCerrarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarPvr.Location = new System.Drawing.Point(676, 250);
+            this.btnCerrarPvr.Name = "btnCerrarPvr";
+            this.btnCerrarPvr.Size = new System.Drawing.Size(174, 49);
+            this.btnCerrarPvr.TabIndex = 14;
+            this.btnCerrarPvr.Text = "Cerrar";
+            this.btnCerrarPvr.UseVisualStyleBackColor = false;
             // 
-            // label15
+            // btnEliminarPvr
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(45, 52);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 23);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Código";
+            this.btnEliminarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnEliminarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarPvr.Location = new System.Drawing.Point(496, 250);
+            this.btnEliminarPvr.Name = "btnEliminarPvr";
+            this.btnEliminarPvr.Size = new System.Drawing.Size(174, 49);
+            this.btnEliminarPvr.TabIndex = 13;
+            this.btnEliminarPvr.Text = "Eliminar";
+            this.btnEliminarPvr.UseVisualStyleBackColor = false;
             // 
-            // label16
+            // btnGuardarPvr
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(31, 134);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(85, 23);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Nombre";
+            this.btnGuardarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnGuardarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPvr.Location = new System.Drawing.Point(316, 250);
+            this.btnGuardarPvr.Name = "btnGuardarPvr";
+            this.btnGuardarPvr.Size = new System.Drawing.Size(174, 49);
+            this.btnGuardarPvr.TabIndex = 12;
+            this.btnGuardarPvr.Text = "Guardar";
+            this.btnGuardarPvr.UseVisualStyleBackColor = false;
             // 
-            // label17
+            // btnAgregarPvr
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(436, 55);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 23);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Apellido";
+            this.btnAgregarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnAgregarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarPvr.Location = new System.Drawing.Point(720, 167);
+            this.btnAgregarPvr.Name = "btnAgregarPvr";
+            this.btnAgregarPvr.Size = new System.Drawing.Size(140, 63);
+            this.btnAgregarPvr.TabIndex = 11;
+            this.btnAgregarPvr.Text = "Agregar";
+            this.btnAgregarPvr.UseVisualStyleBackColor = false;
             // 
-            // label18
+            // cmbProductoPvr
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(436, 139);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(90, 23);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Teléfono";
+            this.cmbProductoPvr.FormattingEnabled = true;
+            this.cmbProductoPvr.Location = new System.Drawing.Point(294, 183);
+            this.cmbProductoPvr.Name = "cmbProductoPvr";
+            this.cmbProductoPvr.Size = new System.Drawing.Size(347, 31);
+            this.cmbProductoPvr.TabIndex = 9;
             // 
-            // txtCodigoCl
+            // txtCorreoPvr
             // 
-            this.txtCodigoCl.Location = new System.Drawing.Point(122, 52);
-            this.txtCodigoCl.Name = "txtCodigoCl";
-            this.txtCodigoCl.Size = new System.Drawing.Size(293, 31);
-            this.txtCodigoCl.TabIndex = 4;
+            this.txtCorreoPvr.Location = new System.Drawing.Point(577, 93);
+            this.txtCorreoPvr.Name = "txtCorreoPvr";
+            this.txtCorreoPvr.Size = new System.Drawing.Size(273, 31);
+            this.txtCorreoPvr.TabIndex = 8;
             // 
-            // txtNombreCl
+            // txtTelefonoPvr
             // 
-            this.txtNombreCl.Location = new System.Drawing.Point(122, 131);
-            this.txtNombreCl.Name = "txtNombreCl";
-            this.txtNombreCl.Size = new System.Drawing.Size(293, 31);
-            this.txtNombreCl.TabIndex = 5;
+            this.txtTelefonoPvr.Location = new System.Drawing.Point(577, 37);
+            this.txtTelefonoPvr.Name = "txtTelefonoPvr";
+            this.txtTelefonoPvr.Size = new System.Drawing.Size(273, 31);
+            this.txtTelefonoPvr.TabIndex = 7;
             // 
-            // txtApellidoCl
+            // txtDireccionPvr
             // 
-            this.txtApellidoCl.Location = new System.Drawing.Point(532, 52);
-            this.txtApellidoCl.Name = "txtApellidoCl";
-            this.txtApellidoCl.Size = new System.Drawing.Size(293, 31);
-            this.txtApellidoCl.TabIndex = 6;
+            this.txtDireccionPvr.Location = new System.Drawing.Point(143, 85);
+            this.txtDireccionPvr.Name = "txtDireccionPvr";
+            this.txtDireccionPvr.Size = new System.Drawing.Size(273, 31);
+            this.txtDireccionPvr.TabIndex = 6;
             // 
-            // txtTelefonoCl
+            // txtNombrePvr
             // 
-            this.txtTelefonoCl.Location = new System.Drawing.Point(532, 136);
-            this.txtTelefonoCl.Name = "txtTelefonoCl";
-            this.txtTelefonoCl.Size = new System.Drawing.Size(293, 31);
-            this.txtTelefonoCl.TabIndex = 7;
+            this.txtNombrePvr.Location = new System.Drawing.Point(143, 29);
+            this.txtNombrePvr.Name = "txtNombrePvr";
+            this.txtNombrePvr.Size = new System.Drawing.Size(273, 31);
+            this.txtNombrePvr.TabIndex = 5;
             // 
-            // btnGuardarCl
+            // label14
             // 
-            this.btnGuardarCl.BackColor = System.Drawing.Color.Purple;
-            this.btnGuardarCl.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCl.Location = new System.Drawing.Point(385, 278);
-            this.btnGuardarCl.Name = "btnGuardarCl";
-            this.btnGuardarCl.Size = new System.Drawing.Size(160, 42);
-            this.btnGuardarCl.TabIndex = 1;
-            this.btnGuardarCl.Text = "Guardar";
-            this.btnGuardarCl.UseVisualStyleBackColor = false;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(53, 189);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(235, 23);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Producto que suministra";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(465, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 23);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Correo";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(465, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 23);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Teléfono";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(33, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 23);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Dirección";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(33, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 23);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Nombre";
+            // 
+            // tbpCliente
+            // 
+            this.tbpCliente.BackColor = System.Drawing.Color.Thistle;
+            this.tbpCliente.Controls.Add(this.btnCerrar);
+            this.tbpCliente.Controls.Add(this.btnEliminarCl);
+            this.tbpCliente.Controls.Add(this.dgvCliente);
+            this.tbpCliente.Controls.Add(this.btnGuardarCl);
+            this.tbpCliente.Controls.Add(this.grpCliente);
+            this.tbpCliente.Location = new System.Drawing.Point(4, 32);
+            this.tbpCliente.Name = "tbpCliente";
+            this.tbpCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCliente.Size = new System.Drawing.Size(937, 598);
+            this.tbpCliente.TabIndex = 3;
+            this.tbpCliente.Text = "Cliente";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Purple;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(727, 278);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(160, 42);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarCl
+            // 
+            this.btnEliminarCl.BackColor = System.Drawing.Color.Purple;
+            this.btnEliminarCl.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCl.Location = new System.Drawing.Point(560, 278);
+            this.btnEliminarCl.Name = "btnEliminarCl";
+            this.btnEliminarCl.Size = new System.Drawing.Size(160, 42);
+            this.btnEliminarCl.TabIndex = 5;
+            this.btnEliminarCl.Text = "Eliminar";
+            this.btnEliminarCl.UseVisualStyleBackColor = false;
             // 
             // dgvCliente
             // 
@@ -853,28 +770,6 @@
             this.dgvCliente.Size = new System.Drawing.Size(859, 209);
             this.dgvCliente.TabIndex = 4;
             // 
-            // btnEliminarCl
-            // 
-            this.btnEliminarCl.BackColor = System.Drawing.Color.Purple;
-            this.btnEliminarCl.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCl.Location = new System.Drawing.Point(560, 278);
-            this.btnEliminarCl.Name = "btnEliminarCl";
-            this.btnEliminarCl.Size = new System.Drawing.Size(160, 42);
-            this.btnEliminarCl.TabIndex = 5;
-            this.btnEliminarCl.Text = "Eliminar";
-            this.btnEliminarCl.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Purple;
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(727, 278);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(160, 42);
-            this.btnCerrar.TabIndex = 6;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            // 
             // clCodigoCl
             // 
             this.clCodigoCl.HeaderText = "Código";
@@ -899,6 +794,109 @@
             this.clTelefonoCl.MinimumWidth = 8;
             this.clTelefonoCl.Name = "clTelefonoCl";
             // 
+            // btnGuardarCl
+            // 
+            this.btnGuardarCl.BackColor = System.Drawing.Color.Purple;
+            this.btnGuardarCl.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCl.Location = new System.Drawing.Point(385, 278);
+            this.btnGuardarCl.Name = "btnGuardarCl";
+            this.btnGuardarCl.Size = new System.Drawing.Size(160, 42);
+            this.btnGuardarCl.TabIndex = 1;
+            this.btnGuardarCl.Text = "Guardar";
+            this.btnGuardarCl.UseVisualStyleBackColor = false;
+            // 
+            // grpCliente
+            // 
+            this.grpCliente.Controls.Add(this.txtTelefonoCl);
+            this.grpCliente.Controls.Add(this.txtApellidoCl);
+            this.grpCliente.Controls.Add(this.txtNombreCl);
+            this.grpCliente.Controls.Add(this.txtCodigoCl);
+            this.grpCliente.Controls.Add(this.label18);
+            this.grpCliente.Controls.Add(this.label17);
+            this.grpCliente.Controls.Add(this.label16);
+            this.grpCliente.Controls.Add(this.label15);
+            this.grpCliente.Location = new System.Drawing.Point(28, 32);
+            this.grpCliente.Name = "grpCliente";
+            this.grpCliente.Size = new System.Drawing.Size(860, 208);
+            this.grpCliente.TabIndex = 0;
+            this.grpCliente.TabStop = false;
+            this.grpCliente.Text = "Datos generales";
+            // 
+            // txtTelefonoCl
+            // 
+            this.txtTelefonoCl.Location = new System.Drawing.Point(532, 136);
+            this.txtTelefonoCl.Name = "txtTelefonoCl";
+            this.txtTelefonoCl.Size = new System.Drawing.Size(293, 31);
+            this.txtTelefonoCl.TabIndex = 7;
+            // 
+            // txtApellidoCl
+            // 
+            this.txtApellidoCl.Location = new System.Drawing.Point(532, 52);
+            this.txtApellidoCl.Name = "txtApellidoCl";
+            this.txtApellidoCl.Size = new System.Drawing.Size(293, 31);
+            this.txtApellidoCl.TabIndex = 6;
+            // 
+            // txtNombreCl
+            // 
+            this.txtNombreCl.Location = new System.Drawing.Point(122, 131);
+            this.txtNombreCl.Name = "txtNombreCl";
+            this.txtNombreCl.Size = new System.Drawing.Size(293, 31);
+            this.txtNombreCl.TabIndex = 5;
+            // 
+            // txtCodigoCl
+            // 
+            this.txtCodigoCl.Location = new System.Drawing.Point(122, 52);
+            this.txtCodigoCl.Name = "txtCodigoCl";
+            this.txtCodigoCl.Size = new System.Drawing.Size(293, 31);
+            this.txtCodigoCl.TabIndex = 4;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(436, 139);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(90, 23);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Teléfono";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(436, 55);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 23);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Apellido";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(31, 134);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 23);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Nombre";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(45, 52);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 23);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Código";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Purple;
+            this.button9.Image = global::Libreria_PAE.Properties.Resources.icons8_añadir_64;
+            this.button9.Location = new System.Drawing.Point(647, 167);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(67, 61);
+            this.button9.TabIndex = 30;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // frmCatalogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -920,12 +918,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvgProducto)).EndInit();
             this.tbpProveedor.ResumeLayout(false);
             this.tbpProveedor.PerformLayout();
-            this.tbpCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAgregar)).EndInit();
+            this.tbpCliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.grpCliente.ResumeLayout(false);
             this.grpCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -986,7 +983,6 @@
         private System.Windows.Forms.ComboBox cmbProductoPvr;
         private System.Windows.Forms.TextBox txtCorreoPvr;
         private System.Windows.Forms.TextBox txtTelefonoPvr;
-        private System.Windows.Forms.PictureBox pcbAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn clCodigoPvr;
         private System.Windows.Forms.DataGridViewTextBoxColumn clProductoPvr;
         private System.Windows.Forms.DataGridViewTextBoxColumn clProveedorPvr;
@@ -1007,5 +1003,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clNombreCl;
         private System.Windows.Forms.DataGridViewTextBoxColumn clApellidoCl;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTelefonoCl;
+        private System.Windows.Forms.Button button9;
     }
 }
