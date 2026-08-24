@@ -93,6 +93,26 @@ namespace Libreria_PAE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_alerta_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-alerta-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_alerta_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-alerta-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_ayuda_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-ayuda-100", resourceCulture);
