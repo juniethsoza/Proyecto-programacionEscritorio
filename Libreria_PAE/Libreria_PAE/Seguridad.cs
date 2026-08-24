@@ -16,5 +16,10 @@ namespace Libreria_PAE
         {
             InitializeComponent();
         }
+
+        private void dgvGUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
