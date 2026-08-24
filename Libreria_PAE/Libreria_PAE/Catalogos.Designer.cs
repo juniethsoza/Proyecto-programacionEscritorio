@@ -30,51 +30,96 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatalogos));
             this.tbcCatalogo = new System.Windows.Forms.TabControl();
             this.tbpCategoria = new System.Windows.Forms.TabPage();
-            this.tbpProducto = new System.Windows.Forms.TabPage();
-            this.tbpProveedor = new System.Windows.Forms.TabPage();
-            this.tbpCliente = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNombreCategoria = new System.Windows.Forms.TextBox();
-            this.txtDescripcionCt = new System.Windows.Forms.TextBox();
-            this.btnGuardarCt = new System.Windows.Forms.Button();
-            this.btnEliminarCt = new System.Windows.Forms.Button();
-            this.btnCerrarCt = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.clId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clNombreCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCodigoPr = new System.Windows.Forms.TextBox();
-            this.txtNombrePr = new System.Windows.Forms.TextBox();
-            this.txtStockAPr = new System.Windows.Forms.TextBox();
-            this.txtPrecioCompraPr = new System.Windows.Forms.TextBox();
-            this.txtPrecioVentaPr = new System.Windows.Forms.TextBox();
-            this.txtStockMPr = new System.Windows.Forms.TextBox();
-            this.cmbCategoriaPR = new System.Windows.Forms.ComboBox();
-            this.btnGuardarPr = new System.Windows.Forms.Button();
-            this.btnEliminarPr = new System.Windows.Forms.Button();
-            this.btnCerrarPr = new System.Windows.Forms.Button();
+            this.btnCerrarCt = new System.Windows.Forms.Button();
+            this.btnEliminarCt = new System.Windows.Forms.Button();
+            this.btnGuardarCt = new System.Windows.Forms.Button();
+            this.txtDescripcionCt = new System.Windows.Forms.TextBox();
+            this.txtNombreCategoria = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbpProducto = new System.Windows.Forms.TabPage();
             this.dvgProducto = new System.Windows.Forms.DataGridView();
             this.clCodigoPr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clNombrePr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clCategoriaPr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clStockPr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clPrecioVentaPr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCerrarPr = new System.Windows.Forms.Button();
+            this.btnEliminarPr = new System.Windows.Forms.Button();
+            this.btnGuardarPr = new System.Windows.Forms.Button();
+            this.cmbCategoriaPR = new System.Windows.Forms.ComboBox();
+            this.txtStockMPr = new System.Windows.Forms.TextBox();
+            this.txtPrecioVentaPr = new System.Windows.Forms.TextBox();
+            this.txtPrecioCompraPr = new System.Windows.Forms.TextBox();
+            this.txtStockAPr = new System.Windows.Forms.TextBox();
+            this.txtNombrePr = new System.Windows.Forms.TextBox();
+            this.txtCodigoPr = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbpProveedor = new System.Windows.Forms.TabPage();
+            this.tbpCliente = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtNombrePvr = new System.Windows.Forms.TextBox();
+            this.txtDireccionPvr = new System.Windows.Forms.TextBox();
+            this.txtTelefonoPvr = new System.Windows.Forms.TextBox();
+            this.txtCorreoPvr = new System.Windows.Forms.TextBox();
+            this.cmbProductoPvr = new System.Windows.Forms.ComboBox();
+            this.btnAgregarPvr = new System.Windows.Forms.Button();
+            this.btnGuardarPvr = new System.Windows.Forms.Button();
+            this.btnEliminarPvr = new System.Windows.Forms.Button();
+            this.btnCerrarPvr = new System.Windows.Forms.Button();
+            this.dgvProveedor = new System.Windows.Forms.DataGridView();
+            this.pcbAgregar = new System.Windows.Forms.PictureBox();
+            this.clCodigoPvr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProductoPvr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProveedorPvr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpCliente = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtCodigoCl = new System.Windows.Forms.TextBox();
+            this.txtNombreCl = new System.Windows.Forms.TextBox();
+            this.txtApellidoCl = new System.Windows.Forms.TextBox();
+            this.txtTelefonoCl = new System.Windows.Forms.TextBox();
+            this.btnGuardarCl = new System.Windows.Forms.Button();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.btnEliminarCl = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.clCodigoCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNombreCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clApellidoCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTelefonoCl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcCatalogo.SuspendLayout();
             this.tbpCategoria.SuspendLayout();
-            this.tbpProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
+            this.tbpProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProducto)).BeginInit();
+            this.tbpProveedor.SuspendLayout();
+            this.tbpCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAgregar)).BeginInit();
+            this.grpCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcCatalogo
@@ -107,119 +152,6 @@
             this.tbpCategoria.TabIndex = 0;
             this.tbpCategoria.Text = "Categoría";
             this.tbpCategoria.Click += new System.EventHandler(this.tbpCategoria_Click);
-            // 
-            // tbpProducto
-            // 
-            this.tbpProducto.BackColor = System.Drawing.Color.Thistle;
-            this.tbpProducto.Controls.Add(this.dvgProducto);
-            this.tbpProducto.Controls.Add(this.btnCerrarPr);
-            this.tbpProducto.Controls.Add(this.btnEliminarPr);
-            this.tbpProducto.Controls.Add(this.btnGuardarPr);
-            this.tbpProducto.Controls.Add(this.cmbCategoriaPR);
-            this.tbpProducto.Controls.Add(this.txtStockMPr);
-            this.tbpProducto.Controls.Add(this.txtPrecioVentaPr);
-            this.tbpProducto.Controls.Add(this.txtPrecioCompraPr);
-            this.tbpProducto.Controls.Add(this.txtStockAPr);
-            this.tbpProducto.Controls.Add(this.txtNombrePr);
-            this.tbpProducto.Controls.Add(this.txtCodigoPr);
-            this.tbpProducto.Controls.Add(this.label9);
-            this.tbpProducto.Controls.Add(this.label8);
-            this.tbpProducto.Controls.Add(this.label7);
-            this.tbpProducto.Controls.Add(this.label6);
-            this.tbpProducto.Controls.Add(this.label5);
-            this.tbpProducto.Controls.Add(this.label4);
-            this.tbpProducto.Controls.Add(this.label3);
-            this.tbpProducto.Location = new System.Drawing.Point(4, 32);
-            this.tbpProducto.Name = "tbpProducto";
-            this.tbpProducto.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpProducto.Size = new System.Drawing.Size(937, 598);
-            this.tbpProducto.TabIndex = 1;
-            this.tbpProducto.Text = "Producto";
-            // 
-            // tbpProveedor
-            // 
-            this.tbpProveedor.BackColor = System.Drawing.Color.Thistle;
-            this.tbpProveedor.Location = new System.Drawing.Point(4, 32);
-            this.tbpProveedor.Name = "tbpProveedor";
-            this.tbpProveedor.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpProveedor.Size = new System.Drawing.Size(937, 598);
-            this.tbpProveedor.TabIndex = 2;
-            this.tbpProveedor.Text = "Proveedor";
-            // 
-            // tbpCliente
-            // 
-            this.tbpCliente.BackColor = System.Drawing.Color.Thistle;
-            this.tbpCliente.Location = new System.Drawing.Point(4, 32);
-            this.tbpCliente.Name = "tbpCliente";
-            this.tbpCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCliente.Size = new System.Drawing.Size(937, 598);
-            this.tbpCliente.TabIndex = 3;
-            this.tbpCliente.Text = "Cliente";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre Categoría";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Descripción";
-            // 
-            // txtNombreCategoria
-            // 
-            this.txtNombreCategoria.Location = new System.Drawing.Point(305, 83);
-            this.txtNombreCategoria.Name = "txtNombreCategoria";
-            this.txtNombreCategoria.Size = new System.Drawing.Size(463, 31);
-            this.txtNombreCategoria.TabIndex = 2;
-            // 
-            // txtDescripcionCt
-            // 
-            this.txtDescripcionCt.Location = new System.Drawing.Point(305, 146);
-            this.txtDescripcionCt.Name = "txtDescripcionCt";
-            this.txtDescripcionCt.Size = new System.Drawing.Size(463, 31);
-            this.txtDescripcionCt.TabIndex = 3;
-            // 
-            // btnGuardarCt
-            // 
-            this.btnGuardarCt.BackColor = System.Drawing.Color.Purple;
-            this.btnGuardarCt.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCt.Location = new System.Drawing.Point(407, 222);
-            this.btnGuardarCt.Name = "btnGuardarCt";
-            this.btnGuardarCt.Size = new System.Drawing.Size(157, 46);
-            this.btnGuardarCt.TabIndex = 4;
-            this.btnGuardarCt.Text = "Guardar";
-            this.btnGuardarCt.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarCt
-            // 
-            this.btnEliminarCt.BackColor = System.Drawing.Color.Purple;
-            this.btnEliminarCt.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCt.Location = new System.Drawing.Point(570, 222);
-            this.btnEliminarCt.Name = "btnEliminarCt";
-            this.btnEliminarCt.Size = new System.Drawing.Size(157, 46);
-            this.btnEliminarCt.TabIndex = 5;
-            this.btnEliminarCt.Text = "Eliminar";
-            this.btnEliminarCt.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarCt
-            // 
-            this.btnCerrarCt.BackColor = System.Drawing.Color.Purple;
-            this.btnCerrarCt.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarCt.Location = new System.Drawing.Point(735, 222);
-            this.btnCerrarCt.Name = "btnCerrarCt";
-            this.btnCerrarCt.Size = new System.Drawing.Size(157, 46);
-            this.btnCerrarCt.TabIndex = 6;
-            this.btnCerrarCt.Text = "Cerrar";
-            this.btnCerrarCt.UseVisualStyleBackColor = false;
             // 
             // dgvCategoria
             // 
@@ -269,151 +201,98 @@
             this.clDescripcion.MinimumWidth = 8;
             this.clDescripcion.Name = "clDescripcion";
             // 
-            // label3
+            // btnCerrarCt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Código";
+            this.btnCerrarCt.BackColor = System.Drawing.Color.Purple;
+            this.btnCerrarCt.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarCt.Location = new System.Drawing.Point(735, 222);
+            this.btnCerrarCt.Name = "btnCerrarCt";
+            this.btnCerrarCt.Size = new System.Drawing.Size(157, 46);
+            this.btnCerrarCt.TabIndex = 6;
+            this.btnCerrarCt.Text = "Cerrar";
+            this.btnCerrarCt.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // btnEliminarCt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 23);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Nombre";
+            this.btnEliminarCt.BackColor = System.Drawing.Color.Purple;
+            this.btnEliminarCt.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCt.Location = new System.Drawing.Point(570, 222);
+            this.btnEliminarCt.Name = "btnEliminarCt";
+            this.btnEliminarCt.Size = new System.Drawing.Size(157, 46);
+            this.btnEliminarCt.TabIndex = 5;
+            this.btnEliminarCt.Text = "Eliminar";
+            this.btnEliminarCt.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // btnGuardarCt
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 150);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 23);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Categoría";
+            this.btnGuardarCt.BackColor = System.Drawing.Color.Purple;
+            this.btnGuardarCt.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCt.Location = new System.Drawing.Point(407, 222);
+            this.btnGuardarCt.Name = "btnGuardarCt";
+            this.btnGuardarCt.Size = new System.Drawing.Size(157, 46);
+            this.btnGuardarCt.TabIndex = 4;
+            this.btnGuardarCt.Text = "Guardar";
+            this.btnGuardarCt.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // txtDescripcionCt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 201);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 23);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Stock actual";
+            this.txtDescripcionCt.Location = new System.Drawing.Point(305, 146);
+            this.txtDescripcionCt.Name = "txtDescripcionCt";
+            this.txtDescripcionCt.Size = new System.Drawing.Size(463, 31);
+            this.txtDescripcionCt.TabIndex = 3;
             // 
-            // label7
+            // txtNombreCategoria
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(444, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 23);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Precio de compra";
+            this.txtNombreCategoria.Location = new System.Drawing.Point(305, 83);
+            this.txtNombreCategoria.Name = "txtNombreCategoria";
+            this.txtNombreCategoria.Size = new System.Drawing.Size(463, 31);
+            this.txtNombreCategoria.TabIndex = 2;
             // 
-            // label8
+            // label2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(463, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 23);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Precio de venta";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(161, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Descripción";
             // 
-            // label9
+            // label1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(475, 150);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 23);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Stock mínimo ";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(112, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre Categoría";
             // 
-            // txtCodigoPr
+            // tbpProducto
             // 
-            this.txtCodigoPr.Location = new System.Drawing.Point(148, 35);
-            this.txtCodigoPr.Name = "txtCodigoPr";
-            this.txtCodigoPr.Size = new System.Drawing.Size(290, 31);
-            this.txtCodigoPr.TabIndex = 7;
-            // 
-            // txtNombrePr
-            // 
-            this.txtNombrePr.Location = new System.Drawing.Point(148, 93);
-            this.txtNombrePr.Name = "txtNombrePr";
-            this.txtNombrePr.Size = new System.Drawing.Size(290, 31);
-            this.txtNombrePr.TabIndex = 8;
-            // 
-            // txtStockAPr
-            // 
-            this.txtStockAPr.Location = new System.Drawing.Point(148, 198);
-            this.txtStockAPr.Name = "txtStockAPr";
-            this.txtStockAPr.Size = new System.Drawing.Size(290, 31);
-            this.txtStockAPr.TabIndex = 9;
-            // 
-            // txtPrecioCompraPr
-            // 
-            this.txtPrecioCompraPr.Location = new System.Drawing.Point(619, 32);
-            this.txtPrecioCompraPr.Name = "txtPrecioCompraPr";
-            this.txtPrecioCompraPr.Size = new System.Drawing.Size(290, 31);
-            this.txtPrecioCompraPr.TabIndex = 10;
-            // 
-            // txtPrecioVentaPr
-            // 
-            this.txtPrecioVentaPr.Location = new System.Drawing.Point(619, 93);
-            this.txtPrecioVentaPr.Name = "txtPrecioVentaPr";
-            this.txtPrecioVentaPr.Size = new System.Drawing.Size(290, 31);
-            this.txtPrecioVentaPr.TabIndex = 11;
-            // 
-            // txtStockMPr
-            // 
-            this.txtStockMPr.Location = new System.Drawing.Point(619, 147);
-            this.txtStockMPr.Name = "txtStockMPr";
-            this.txtStockMPr.Size = new System.Drawing.Size(290, 31);
-            this.txtStockMPr.TabIndex = 12;
-            // 
-            // cmbCategoriaPR
-            // 
-            this.cmbCategoriaPR.FormattingEnabled = true;
-            this.cmbCategoriaPR.Location = new System.Drawing.Point(148, 147);
-            this.cmbCategoriaPR.Name = "cmbCategoriaPR";
-            this.cmbCategoriaPR.Size = new System.Drawing.Size(290, 31);
-            this.cmbCategoriaPR.TabIndex = 13;
-            // 
-            // btnGuardarPr
-            // 
-            this.btnGuardarPr.BackColor = System.Drawing.Color.Purple;
-            this.btnGuardarPr.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPr.Location = new System.Drawing.Point(372, 276);
-            this.btnGuardarPr.Name = "btnGuardarPr";
-            this.btnGuardarPr.Size = new System.Drawing.Size(175, 48);
-            this.btnGuardarPr.TabIndex = 14;
-            this.btnGuardarPr.Text = "Guardar";
-            this.btnGuardarPr.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarPr
-            // 
-            this.btnEliminarPr.BackColor = System.Drawing.Color.Purple;
-            this.btnEliminarPr.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarPr.Location = new System.Drawing.Point(553, 276);
-            this.btnEliminarPr.Name = "btnEliminarPr";
-            this.btnEliminarPr.Size = new System.Drawing.Size(175, 48);
-            this.btnEliminarPr.TabIndex = 15;
-            this.btnEliminarPr.Text = "Eliminar";
-            this.btnEliminarPr.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarPr
-            // 
-            this.btnCerrarPr.BackColor = System.Drawing.Color.Purple;
-            this.btnCerrarPr.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarPr.Location = new System.Drawing.Point(734, 276);
-            this.btnCerrarPr.Name = "btnCerrarPr";
-            this.btnCerrarPr.Size = new System.Drawing.Size(175, 48);
-            this.btnCerrarPr.TabIndex = 16;
-            this.btnCerrarPr.Text = "Cerrar";
-            this.btnCerrarPr.UseVisualStyleBackColor = false;
+            this.tbpProducto.BackColor = System.Drawing.Color.Thistle;
+            this.tbpProducto.Controls.Add(this.dvgProducto);
+            this.tbpProducto.Controls.Add(this.btnCerrarPr);
+            this.tbpProducto.Controls.Add(this.btnEliminarPr);
+            this.tbpProducto.Controls.Add(this.btnGuardarPr);
+            this.tbpProducto.Controls.Add(this.cmbCategoriaPR);
+            this.tbpProducto.Controls.Add(this.txtStockMPr);
+            this.tbpProducto.Controls.Add(this.txtPrecioVentaPr);
+            this.tbpProducto.Controls.Add(this.txtPrecioCompraPr);
+            this.tbpProducto.Controls.Add(this.txtStockAPr);
+            this.tbpProducto.Controls.Add(this.txtNombrePr);
+            this.tbpProducto.Controls.Add(this.txtCodigoPr);
+            this.tbpProducto.Controls.Add(this.label9);
+            this.tbpProducto.Controls.Add(this.label8);
+            this.tbpProducto.Controls.Add(this.label7);
+            this.tbpProducto.Controls.Add(this.label6);
+            this.tbpProducto.Controls.Add(this.label5);
+            this.tbpProducto.Controls.Add(this.label4);
+            this.tbpProducto.Controls.Add(this.label3);
+            this.tbpProducto.Location = new System.Drawing.Point(4, 32);
+            this.tbpProducto.Name = "tbpProducto";
+            this.tbpProducto.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpProducto.Size = new System.Drawing.Size(937, 598);
+            this.tbpProducto.TabIndex = 1;
+            this.tbpProducto.Text = "Producto";
             // 
             // dvgProducto
             // 
@@ -421,7 +300,7 @@
             this.dvgProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgProducto.BackgroundColor = System.Drawing.Color.White;
             this.dvgProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Plum;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -476,6 +355,550 @@
             this.clPrecioVentaPr.MinimumWidth = 8;
             this.clPrecioVentaPr.Name = "clPrecioVentaPr";
             // 
+            // btnCerrarPr
+            // 
+            this.btnCerrarPr.BackColor = System.Drawing.Color.Purple;
+            this.btnCerrarPr.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarPr.Location = new System.Drawing.Point(734, 276);
+            this.btnCerrarPr.Name = "btnCerrarPr";
+            this.btnCerrarPr.Size = new System.Drawing.Size(175, 48);
+            this.btnCerrarPr.TabIndex = 16;
+            this.btnCerrarPr.Text = "Cerrar";
+            this.btnCerrarPr.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarPr
+            // 
+            this.btnEliminarPr.BackColor = System.Drawing.Color.Purple;
+            this.btnEliminarPr.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarPr.Location = new System.Drawing.Point(553, 276);
+            this.btnEliminarPr.Name = "btnEliminarPr";
+            this.btnEliminarPr.Size = new System.Drawing.Size(175, 48);
+            this.btnEliminarPr.TabIndex = 15;
+            this.btnEliminarPr.Text = "Eliminar";
+            this.btnEliminarPr.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarPr
+            // 
+            this.btnGuardarPr.BackColor = System.Drawing.Color.Purple;
+            this.btnGuardarPr.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPr.Location = new System.Drawing.Point(372, 276);
+            this.btnGuardarPr.Name = "btnGuardarPr";
+            this.btnGuardarPr.Size = new System.Drawing.Size(175, 48);
+            this.btnGuardarPr.TabIndex = 14;
+            this.btnGuardarPr.Text = "Guardar";
+            this.btnGuardarPr.UseVisualStyleBackColor = false;
+            // 
+            // cmbCategoriaPR
+            // 
+            this.cmbCategoriaPR.FormattingEnabled = true;
+            this.cmbCategoriaPR.Location = new System.Drawing.Point(148, 147);
+            this.cmbCategoriaPR.Name = "cmbCategoriaPR";
+            this.cmbCategoriaPR.Size = new System.Drawing.Size(290, 31);
+            this.cmbCategoriaPR.TabIndex = 13;
+            // 
+            // txtStockMPr
+            // 
+            this.txtStockMPr.Location = new System.Drawing.Point(619, 147);
+            this.txtStockMPr.Name = "txtStockMPr";
+            this.txtStockMPr.Size = new System.Drawing.Size(290, 31);
+            this.txtStockMPr.TabIndex = 12;
+            // 
+            // txtPrecioVentaPr
+            // 
+            this.txtPrecioVentaPr.Location = new System.Drawing.Point(619, 93);
+            this.txtPrecioVentaPr.Name = "txtPrecioVentaPr";
+            this.txtPrecioVentaPr.Size = new System.Drawing.Size(290, 31);
+            this.txtPrecioVentaPr.TabIndex = 11;
+            // 
+            // txtPrecioCompraPr
+            // 
+            this.txtPrecioCompraPr.Location = new System.Drawing.Point(619, 32);
+            this.txtPrecioCompraPr.Name = "txtPrecioCompraPr";
+            this.txtPrecioCompraPr.Size = new System.Drawing.Size(290, 31);
+            this.txtPrecioCompraPr.TabIndex = 10;
+            // 
+            // txtStockAPr
+            // 
+            this.txtStockAPr.Location = new System.Drawing.Point(148, 198);
+            this.txtStockAPr.Name = "txtStockAPr";
+            this.txtStockAPr.Size = new System.Drawing.Size(290, 31);
+            this.txtStockAPr.TabIndex = 9;
+            // 
+            // txtNombrePr
+            // 
+            this.txtNombrePr.Location = new System.Drawing.Point(148, 93);
+            this.txtNombrePr.Name = "txtNombrePr";
+            this.txtNombrePr.Size = new System.Drawing.Size(290, 31);
+            this.txtNombrePr.TabIndex = 8;
+            // 
+            // txtCodigoPr
+            // 
+            this.txtCodigoPr.Location = new System.Drawing.Point(148, 35);
+            this.txtCodigoPr.Name = "txtCodigoPr";
+            this.txtCodigoPr.Size = new System.Drawing.Size(290, 31);
+            this.txtCodigoPr.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(475, 150);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 23);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Stock mínimo ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(463, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 23);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Precio de venta";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(444, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 23);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Precio de compra";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 23);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Stock actual";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(31, 150);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 23);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Categoría";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(43, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 23);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Nombre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(57, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Código";
+            // 
+            // tbpProveedor
+            // 
+            this.tbpProveedor.BackColor = System.Drawing.Color.Thistle;
+            this.tbpProveedor.Controls.Add(this.pcbAgregar);
+            this.tbpProveedor.Controls.Add(this.dgvProveedor);
+            this.tbpProveedor.Controls.Add(this.btnCerrarPvr);
+            this.tbpProveedor.Controls.Add(this.btnEliminarPvr);
+            this.tbpProveedor.Controls.Add(this.btnGuardarPvr);
+            this.tbpProveedor.Controls.Add(this.btnAgregarPvr);
+            this.tbpProveedor.Controls.Add(this.cmbProductoPvr);
+            this.tbpProveedor.Controls.Add(this.txtCorreoPvr);
+            this.tbpProveedor.Controls.Add(this.txtTelefonoPvr);
+            this.tbpProveedor.Controls.Add(this.txtDireccionPvr);
+            this.tbpProveedor.Controls.Add(this.txtNombrePvr);
+            this.tbpProveedor.Controls.Add(this.label14);
+            this.tbpProveedor.Controls.Add(this.label13);
+            this.tbpProveedor.Controls.Add(this.label12);
+            this.tbpProveedor.Controls.Add(this.label11);
+            this.tbpProveedor.Controls.Add(this.label10);
+            this.tbpProveedor.Location = new System.Drawing.Point(4, 32);
+            this.tbpProveedor.Name = "tbpProveedor";
+            this.tbpProveedor.Padding = new System.Windows.Forms.Padding(2);
+            this.tbpProveedor.Size = new System.Drawing.Size(937, 598);
+            this.tbpProveedor.TabIndex = 2;
+            this.tbpProveedor.Text = "Proveedor";
+            // 
+            // tbpCliente
+            // 
+            this.tbpCliente.BackColor = System.Drawing.Color.Thistle;
+            this.tbpCliente.Controls.Add(this.btnCerrar);
+            this.tbpCliente.Controls.Add(this.btnEliminarCl);
+            this.tbpCliente.Controls.Add(this.dgvCliente);
+            this.tbpCliente.Controls.Add(this.btnGuardarCl);
+            this.tbpCliente.Controls.Add(this.grpCliente);
+            this.tbpCliente.Location = new System.Drawing.Point(4, 32);
+            this.tbpCliente.Name = "tbpCliente";
+            this.tbpCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCliente.Size = new System.Drawing.Size(937, 598);
+            this.tbpCliente.TabIndex = 3;
+            this.tbpCliente.Text = "Cliente";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(33, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 23);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Nombre";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(33, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 23);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Dirección";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(465, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 23);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Teléfono";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(465, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 23);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Correo";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(53, 189);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(235, 23);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Producto que suministra";
+            // 
+            // txtNombrePvr
+            // 
+            this.txtNombrePvr.Location = new System.Drawing.Point(143, 29);
+            this.txtNombrePvr.Name = "txtNombrePvr";
+            this.txtNombrePvr.Size = new System.Drawing.Size(273, 31);
+            this.txtNombrePvr.TabIndex = 5;
+            // 
+            // txtDireccionPvr
+            // 
+            this.txtDireccionPvr.Location = new System.Drawing.Point(143, 85);
+            this.txtDireccionPvr.Name = "txtDireccionPvr";
+            this.txtDireccionPvr.Size = new System.Drawing.Size(273, 31);
+            this.txtDireccionPvr.TabIndex = 6;
+            // 
+            // txtTelefonoPvr
+            // 
+            this.txtTelefonoPvr.Location = new System.Drawing.Point(577, 37);
+            this.txtTelefonoPvr.Name = "txtTelefonoPvr";
+            this.txtTelefonoPvr.Size = new System.Drawing.Size(273, 31);
+            this.txtTelefonoPvr.TabIndex = 7;
+            // 
+            // txtCorreoPvr
+            // 
+            this.txtCorreoPvr.Location = new System.Drawing.Point(577, 93);
+            this.txtCorreoPvr.Name = "txtCorreoPvr";
+            this.txtCorreoPvr.Size = new System.Drawing.Size(273, 31);
+            this.txtCorreoPvr.TabIndex = 8;
+            // 
+            // cmbProductoPvr
+            // 
+            this.cmbProductoPvr.FormattingEnabled = true;
+            this.cmbProductoPvr.Location = new System.Drawing.Point(294, 183);
+            this.cmbProductoPvr.Name = "cmbProductoPvr";
+            this.cmbProductoPvr.Size = new System.Drawing.Size(347, 31);
+            this.cmbProductoPvr.TabIndex = 9;
+            // 
+            // btnAgregarPvr
+            // 
+            this.btnAgregarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnAgregarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarPvr.Location = new System.Drawing.Point(710, 173);
+            this.btnAgregarPvr.Name = "btnAgregarPvr";
+            this.btnAgregarPvr.Size = new System.Drawing.Size(140, 49);
+            this.btnAgregarPvr.TabIndex = 11;
+            this.btnAgregarPvr.Text = "Agregar";
+            this.btnAgregarPvr.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarPvr
+            // 
+            this.btnGuardarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnGuardarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPvr.Location = new System.Drawing.Point(316, 250);
+            this.btnGuardarPvr.Name = "btnGuardarPvr";
+            this.btnGuardarPvr.Size = new System.Drawing.Size(174, 49);
+            this.btnGuardarPvr.TabIndex = 12;
+            this.btnGuardarPvr.Text = "Guardar";
+            this.btnGuardarPvr.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarPvr
+            // 
+            this.btnEliminarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnEliminarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarPvr.Location = new System.Drawing.Point(496, 250);
+            this.btnEliminarPvr.Name = "btnEliminarPvr";
+            this.btnEliminarPvr.Size = new System.Drawing.Size(174, 49);
+            this.btnEliminarPvr.TabIndex = 13;
+            this.btnEliminarPvr.Text = "Eliminar";
+            this.btnEliminarPvr.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrarPvr
+            // 
+            this.btnCerrarPvr.BackColor = System.Drawing.Color.Purple;
+            this.btnCerrarPvr.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarPvr.Location = new System.Drawing.Point(676, 250);
+            this.btnCerrarPvr.Name = "btnCerrarPvr";
+            this.btnCerrarPvr.Size = new System.Drawing.Size(174, 49);
+            this.btnCerrarPvr.TabIndex = 14;
+            this.btnCerrarPvr.Text = "Cerrar";
+            this.btnCerrarPvr.UseVisualStyleBackColor = false;
+            // 
+            // dgvProveedor
+            // 
+            this.dgvProveedor.AllowUserToAddRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvProveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProveedor.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Plum;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProveedor.ColumnHeadersHeight = 30;
+            this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clCodigoPvr,
+            this.clProductoPvr,
+            this.clProveedorPvr});
+            this.dgvProveedor.EnableHeadersVisualStyles = false;
+            this.dgvProveedor.Location = new System.Drawing.Point(26, 324);
+            this.dgvProveedor.Name = "dgvProveedor";
+            this.dgvProveedor.RowHeadersVisible = false;
+            this.dgvProveedor.RowHeadersWidth = 62;
+            this.dgvProveedor.RowTemplate.Height = 28;
+            this.dgvProveedor.Size = new System.Drawing.Size(868, 226);
+            this.dgvProveedor.TabIndex = 15;
+            // 
+            // pcbAgregar
+            // 
+            this.pcbAgregar.BackColor = System.Drawing.Color.Thistle;
+            this.pcbAgregar.Image = global::Libreria_PAE.Properties.Resources.icons8_añadir_64;
+            this.pcbAgregar.Location = new System.Drawing.Point(647, 180);
+            this.pcbAgregar.Name = "pcbAgregar";
+            this.pcbAgregar.Size = new System.Drawing.Size(57, 32);
+            this.pcbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbAgregar.TabIndex = 16;
+            this.pcbAgregar.TabStop = false;
+            // 
+            // clCodigoPvr
+            // 
+            this.clCodigoPvr.HeaderText = "Código";
+            this.clCodigoPvr.MinimumWidth = 8;
+            this.clCodigoPvr.Name = "clCodigoPvr";
+            // 
+            // clProductoPvr
+            // 
+            this.clProductoPvr.HeaderText = "Producto";
+            this.clProductoPvr.MinimumWidth = 8;
+            this.clProductoPvr.Name = "clProductoPvr";
+            // 
+            // clProveedorPvr
+            // 
+            this.clProveedorPvr.HeaderText = "Proveedor";
+            this.clProveedorPvr.MinimumWidth = 8;
+            this.clProveedorPvr.Name = "clProveedorPvr";
+            // 
+            // grpCliente
+            // 
+            this.grpCliente.Controls.Add(this.txtTelefonoCl);
+            this.grpCliente.Controls.Add(this.txtApellidoCl);
+            this.grpCliente.Controls.Add(this.txtNombreCl);
+            this.grpCliente.Controls.Add(this.txtCodigoCl);
+            this.grpCliente.Controls.Add(this.label18);
+            this.grpCliente.Controls.Add(this.label17);
+            this.grpCliente.Controls.Add(this.label16);
+            this.grpCliente.Controls.Add(this.label15);
+            this.grpCliente.Location = new System.Drawing.Point(28, 32);
+            this.grpCliente.Name = "grpCliente";
+            this.grpCliente.Size = new System.Drawing.Size(860, 208);
+            this.grpCliente.TabIndex = 0;
+            this.grpCliente.TabStop = false;
+            this.grpCliente.Text = "Datos generales";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(45, 52);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 23);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Código";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(31, 134);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 23);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Nombre";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(436, 55);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 23);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Apellido";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(436, 139);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(90, 23);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Teléfono";
+            // 
+            // txtCodigoCl
+            // 
+            this.txtCodigoCl.Location = new System.Drawing.Point(122, 52);
+            this.txtCodigoCl.Name = "txtCodigoCl";
+            this.txtCodigoCl.Size = new System.Drawing.Size(293, 31);
+            this.txtCodigoCl.TabIndex = 4;
+            // 
+            // txtNombreCl
+            // 
+            this.txtNombreCl.Location = new System.Drawing.Point(122, 131);
+            this.txtNombreCl.Name = "txtNombreCl";
+            this.txtNombreCl.Size = new System.Drawing.Size(293, 31);
+            this.txtNombreCl.TabIndex = 5;
+            // 
+            // txtApellidoCl
+            // 
+            this.txtApellidoCl.Location = new System.Drawing.Point(532, 52);
+            this.txtApellidoCl.Name = "txtApellidoCl";
+            this.txtApellidoCl.Size = new System.Drawing.Size(293, 31);
+            this.txtApellidoCl.TabIndex = 6;
+            // 
+            // txtTelefonoCl
+            // 
+            this.txtTelefonoCl.Location = new System.Drawing.Point(532, 136);
+            this.txtTelefonoCl.Name = "txtTelefonoCl";
+            this.txtTelefonoCl.Size = new System.Drawing.Size(293, 31);
+            this.txtTelefonoCl.TabIndex = 7;
+            // 
+            // btnGuardarCl
+            // 
+            this.btnGuardarCl.BackColor = System.Drawing.Color.Purple;
+            this.btnGuardarCl.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCl.Location = new System.Drawing.Point(385, 278);
+            this.btnGuardarCl.Name = "btnGuardarCl";
+            this.btnGuardarCl.Size = new System.Drawing.Size(160, 42);
+            this.btnGuardarCl.TabIndex = 1;
+            this.btnGuardarCl.Text = "Guardar";
+            this.btnGuardarCl.UseVisualStyleBackColor = false;
+            // 
+            // dgvCliente
+            // 
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCliente.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Plum;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvCliente.ColumnHeadersHeight = 30;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clCodigoCl,
+            this.clNombreCl,
+            this.clApellidoCl,
+            this.clTelefonoCl});
+            this.dgvCliente.EnableHeadersVisualStyles = false;
+            this.dgvCliente.Location = new System.Drawing.Point(28, 349);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.RowHeadersVisible = false;
+            this.dgvCliente.RowHeadersWidth = 62;
+            this.dgvCliente.RowTemplate.Height = 28;
+            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCliente.Size = new System.Drawing.Size(859, 209);
+            this.dgvCliente.TabIndex = 4;
+            // 
+            // btnEliminarCl
+            // 
+            this.btnEliminarCl.BackColor = System.Drawing.Color.Purple;
+            this.btnEliminarCl.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCl.Location = new System.Drawing.Point(560, 278);
+            this.btnEliminarCl.Name = "btnEliminarCl";
+            this.btnEliminarCl.Size = new System.Drawing.Size(160, 42);
+            this.btnEliminarCl.TabIndex = 5;
+            this.btnEliminarCl.Text = "Eliminar";
+            this.btnEliminarCl.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Purple;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(727, 278);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(160, 42);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // clCodigoCl
+            // 
+            this.clCodigoCl.HeaderText = "Código";
+            this.clCodigoCl.MinimumWidth = 8;
+            this.clCodigoCl.Name = "clCodigoCl";
+            // 
+            // clNombreCl
+            // 
+            this.clNombreCl.HeaderText = "Nombre";
+            this.clNombreCl.MinimumWidth = 8;
+            this.clNombreCl.Name = "clNombreCl";
+            // 
+            // clApellidoCl
+            // 
+            this.clApellidoCl.HeaderText = "Apellido";
+            this.clApellidoCl.MinimumWidth = 8;
+            this.clApellidoCl.Name = "clApellidoCl";
+            // 
+            // clTelefonoCl
+            // 
+            this.clTelefonoCl.HeaderText = "Teléfono";
+            this.clTelefonoCl.MinimumWidth = 8;
+            this.clTelefonoCl.Name = "clTelefonoCl";
+            // 
             // frmCatalogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -491,10 +914,18 @@
             this.tbcCatalogo.ResumeLayout(false);
             this.tbpCategoria.ResumeLayout(false);
             this.tbpCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
             this.tbpProducto.ResumeLayout(false);
             this.tbpProducto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProducto)).EndInit();
+            this.tbpProveedor.ResumeLayout(false);
+            this.tbpProveedor.PerformLayout();
+            this.tbpCliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAgregar)).EndInit();
+            this.grpCliente.ResumeLayout(false);
+            this.grpCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,5 +971,41 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clCategoriaPr;
         private System.Windows.Forms.DataGridViewTextBoxColumn clStockPr;
         private System.Windows.Forms.DataGridViewTextBoxColumn clPrecioVentaPr;
+        private System.Windows.Forms.TextBox txtDireccionPvr;
+        private System.Windows.Forms.TextBox txtNombrePvr;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgvProveedor;
+        private System.Windows.Forms.Button btnCerrarPvr;
+        private System.Windows.Forms.Button btnEliminarPvr;
+        private System.Windows.Forms.Button btnGuardarPvr;
+        private System.Windows.Forms.Button btnAgregarPvr;
+        private System.Windows.Forms.ComboBox cmbProductoPvr;
+        private System.Windows.Forms.TextBox txtCorreoPvr;
+        private System.Windows.Forms.TextBox txtTelefonoPvr;
+        private System.Windows.Forms.PictureBox pcbAgregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clCodigoPvr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProductoPvr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProveedorPvr;
+        private System.Windows.Forms.GroupBox grpCliente;
+        private System.Windows.Forms.Button btnGuardarCl;
+        private System.Windows.Forms.TextBox txtTelefonoCl;
+        private System.Windows.Forms.TextBox txtApellidoCl;
+        private System.Windows.Forms.TextBox txtNombreCl;
+        private System.Windows.Forms.TextBox txtCodigoCl;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnEliminarCl;
+        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clCodigoCl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clNombreCl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clApellidoCl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTelefonoCl;
     }
 }
