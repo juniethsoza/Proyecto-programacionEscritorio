@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Libreria_PAE
 {
-    public partial class frmLogin : Form
+    public partial class Seguridad : Form
     {
-        public frmLogin()
+        public Seguridad()
         {
             InitializeComponent();
         }
