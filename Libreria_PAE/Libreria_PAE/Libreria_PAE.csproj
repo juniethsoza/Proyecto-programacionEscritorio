@@ -54,6 +54,12 @@
     <Compile Include="Ayuda.Designer.cs">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cambio de contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambio de contraseña.Designer.cs">
+      <DependentUpon>Cambio de contraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambio de contraseña.resx">
+      <DependentUpon>Cambio de contraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos.resx">
       <DependentUpon>Catalogos.cs</DependentUpon>
