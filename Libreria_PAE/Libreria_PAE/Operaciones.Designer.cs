@@ -36,7 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOperaciones));
             this.tbcOperaciones = new System.Windows.Forms.TabControl();
             this.tbpVentaF = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnGenerarFac = new System.Windows.Forms.Button();
             this.btnCerrarVF = new System.Windows.Forms.Button();
             this.btnNuevoVF = new System.Windows.Forms.Button();
             this.btnGuardarVF = new System.Windows.Forms.Button();
@@ -129,7 +129,7 @@
             // tbpVentaF
             // 
             this.tbpVentaF.BackColor = System.Drawing.Color.Thistle;
-            this.tbpVentaF.Controls.Add(this.button4);
+            this.tbpVentaF.Controls.Add(this.btnGenerarFac);
             this.tbpVentaF.Controls.Add(this.btnCerrarVF);
             this.tbpVentaF.Controls.Add(this.btnNuevoVF);
             this.tbpVentaF.Controls.Add(this.btnGuardarVF);
@@ -142,16 +142,16 @@
             this.tbpVentaF.TabIndex = 0;
             this.tbpVentaF.Text = "Venta/Facturación";
             // 
-            // button4
+            // btnGenerarFac
             // 
-            this.button4.BackColor = System.Drawing.Color.Purple;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(26, 716);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(214, 65);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Generar Factura";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnGenerarFac.BackColor = System.Drawing.Color.Purple;
+            this.btnGenerarFac.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarFac.Location = new System.Drawing.Point(26, 716);
+            this.btnGenerarFac.Name = "btnGenerarFac";
+            this.btnGenerarFac.Size = new System.Drawing.Size(214, 65);
+            this.btnGenerarFac.TabIndex = 5;
+            this.btnGenerarFac.Text = "Generar Factura";
+            this.btnGenerarFac.UseVisualStyleBackColor = false;
             // 
             // btnCerrarVF
             // 
@@ -199,7 +199,7 @@
             this.gbxFacturacion.Controls.Add(this.label11);
             this.gbxFacturacion.Controls.Add(this.label10);
             this.gbxFacturacion.Controls.Add(this.dgvDetalleFactura);
-            this.gbxFacturacion.Location = new System.Drawing.Point(26, 388);
+            this.gbxFacturacion.Location = new System.Drawing.Point(31, 388);
             this.gbxFacturacion.Name = "gbxFacturacion";
             this.gbxFacturacion.Size = new System.Drawing.Size(1074, 322);
             this.gbxFacturacion.TabIndex = 1;
@@ -917,7 +917,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscarProd;
         private System.Windows.Forms.DateTimePicker dtpFechaFactura;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGenerarFac;
         private System.Windows.Forms.Button btnCerrarVF;
         private System.Windows.Forms.Button btnNuevoVF;
         private System.Windows.Forms.Button btnGuardarVF;

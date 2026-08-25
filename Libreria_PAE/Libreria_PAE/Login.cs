@@ -17,24 +17,20 @@ namespace Libreria_PAE
             InitializeComponent();
         }
 
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
+            if (txtUsuario.Text == "admin" && txtContraseña.Text == "123")
+            {
+                MessageBox.Show("Inicio de sesión exitoso");
+            }
+            else
+            {
+                MessageBox.Show("Usuario inválido");
+                txtUsuario.Clear();
+                txtContraseña.Clear();
+            }
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
