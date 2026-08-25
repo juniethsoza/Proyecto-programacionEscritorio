@@ -36,7 +36,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOperaciones));
             this.tbcOperaciones = new System.Windows.Forms.TabControl();
             this.tbpVentaF = new System.Windows.Forms.TabPage();
-<<<<<<< HEAD
             this.button4 = new System.Windows.Forms.Button();
             this.btnCerrarVF = new System.Windows.Forms.Button();
             this.btnNuevoVF = new System.Windows.Forms.Button();
@@ -148,7 +147,6 @@
             // tbpVentaF
             // 
             this.tbpVentaF.BackColor = System.Drawing.Color.Thistle;
-<<<<<<< HEAD
             this.tbpVentaF.Controls.Add(this.button4);
             this.tbpVentaF.Controls.Add(this.btnCerrarVF);
             this.tbpVentaF.Controls.Add(this.btnNuevoVF);
@@ -162,7 +160,7 @@
             this.tbpVentaF.TabIndex = 0;
             this.tbpVentaF.Text = "Venta/Facturación";
             // 
-            // button4
+            // btnGenerarFac
             // 
             this.button4.BackColor = System.Drawing.Color.Purple;
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -172,15 +170,6 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Generar Factura";
             this.button4.UseVisualStyleBackColor = false;
-=======
-            this.tbpVentaF.Controls.Add(this.groupBox2);
-            this.tbpVentaF.Controls.Add(this.groupBox1);
-            this.tbpVentaF.Location = new System.Drawing.Point(4, 29);
-            this.tbpVentaF.Name = "tbpVentaF";
-            this.tbpVentaF.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpVentaF.Size = new System.Drawing.Size(977, 643);
-            this.tbpVentaF.TabIndex = 0;
-            this.tbpVentaF.Text = "Venta/Facturación";
             // 
             // groupBox2
             // 
@@ -239,7 +228,7 @@
             this.gbxFacturacion.Controls.Add(this.label11);
             this.gbxFacturacion.Controls.Add(this.label10);
             this.gbxFacturacion.Controls.Add(this.dgvDetalleFactura);
-            this.gbxFacturacion.Location = new System.Drawing.Point(26, 388);
+            this.gbxFacturacion.Location = new System.Drawing.Point(31, 388);
             this.gbxFacturacion.Name = "gbxFacturacion";
             this.gbxFacturacion.Size = new System.Drawing.Size(1074, 322);
             this.gbxFacturacion.TabIndex = 1;
@@ -1129,7 +1118,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscarProd;
         private System.Windows.Forms.DateTimePicker dtpFechaFactura;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGenerarFac;
         private System.Windows.Forms.Button btnCerrarVF;
         private System.Windows.Forms.Button btnNuevoVF;
         private System.Windows.Forms.Button btnGuardarVF;
