@@ -38,6 +38,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtCorreoGU = new System.Windows.Forms.TextBox();
             this.dgvGUsuarios = new System.Windows.Forms.DataGridView();
+            this.colUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApellidoGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLMcorreoGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLMtelefonoGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrarGU = new System.Windows.Forms.Button();
             this.btnEliminarGU = new System.Windows.Forms.Button();
             this.btnGuardarGU = new System.Windows.Forms.Button();
@@ -45,7 +51,7 @@
             this.txtContraseñaGU = new System.Windows.Forms.TextBox();
             this.txtApellidoGU = new System.Windows.Forms.TextBox();
             this.txtNombreGU = new System.Windows.Forms.TextBox();
-            this.txtUsuarioGU = new System.Windows.Forms.TextBox();
+            this.txtIdUsuarioGU = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,11 +68,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pcbAlerta = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.colUsuarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLMcorreoGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLMtelefonoGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcOpciones.SuspendLayout();
             this.tbpUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGUsuarios)).BeginInit();
@@ -99,7 +100,7 @@
             this.tbpUsuarios.Controls.Add(this.txtContraseñaGU);
             this.tbpUsuarios.Controls.Add(this.txtApellidoGU);
             this.tbpUsuarios.Controls.Add(this.txtNombreGU);
-            this.tbpUsuarios.Controls.Add(this.txtUsuarioGU);
+            this.tbpUsuarios.Controls.Add(this.txtIdUsuarioGU);
             this.tbpUsuarios.Controls.Add(this.label5);
             this.tbpUsuarios.Controls.Add(this.label4);
             this.tbpUsuarios.Controls.Add(this.label3);
@@ -162,12 +163,13 @@
             this.dgvGUsuarios.ColumnHeadersHeight = 30;
             this.dgvGUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colUsuarios,
-            this.colNombre,
+            this.colNombreGU,
+            this.colApellidoGU,
             this.CLMcorreoGU,
             this.CLMtelefonoGU,
             this.colRol});
             this.dgvGUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvGUsuarios.Location = new System.Drawing.Point(41, 340);
+            this.dgvGUsuarios.Location = new System.Drawing.Point(53, 337);
             this.dgvGUsuarios.Name = "dgvGUsuarios";
             this.dgvGUsuarios.RowHeadersVisible = false;
             this.dgvGUsuarios.RowHeadersWidth = 62;
@@ -175,6 +177,42 @@
             this.dgvGUsuarios.Size = new System.Drawing.Size(865, 228);
             this.dgvGUsuarios.TabIndex = 13;
             this.dgvGUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGUsuarios_CellContentClick);
+            // 
+            // colUsuarios
+            // 
+            this.colUsuarios.HeaderText = "IdUsuario";
+            this.colUsuarios.MinimumWidth = 8;
+            this.colUsuarios.Name = "colUsuarios";
+            // 
+            // colNombreGU
+            // 
+            this.colNombreGU.HeaderText = "Nombre ";
+            this.colNombreGU.MinimumWidth = 8;
+            this.colNombreGU.Name = "colNombreGU";
+            // 
+            // colApellidoGU
+            // 
+            this.colApellidoGU.HeaderText = "Apellido";
+            this.colApellidoGU.MinimumWidth = 6;
+            this.colApellidoGU.Name = "colApellidoGU";
+            // 
+            // CLMcorreoGU
+            // 
+            this.CLMcorreoGU.HeaderText = "Correo electronico";
+            this.CLMcorreoGU.MinimumWidth = 6;
+            this.CLMcorreoGU.Name = "CLMcorreoGU";
+            // 
+            // CLMtelefonoGU
+            // 
+            this.CLMtelefonoGU.HeaderText = "Telefono";
+            this.CLMtelefonoGU.MinimumWidth = 6;
+            this.CLMtelefonoGU.Name = "CLMtelefonoGU";
+            // 
+            // colRol
+            // 
+            this.colRol.HeaderText = "Rol";
+            this.colRol.MinimumWidth = 8;
+            this.colRol.Name = "colRol";
             // 
             // btnCerrarGU
             // 
@@ -238,12 +276,12 @@
             this.txtNombreGU.Size = new System.Drawing.Size(348, 27);
             this.txtNombreGU.TabIndex = 6;
             // 
-            // txtUsuarioGU
+            // txtIdUsuarioGU
             // 
-            this.txtUsuarioGU.Location = new System.Drawing.Point(155, 40);
-            this.txtUsuarioGU.Name = "txtUsuarioGU";
-            this.txtUsuarioGU.Size = new System.Drawing.Size(348, 27);
-            this.txtUsuarioGU.TabIndex = 5;
+            this.txtIdUsuarioGU.Location = new System.Drawing.Point(155, 40);
+            this.txtIdUsuarioGU.Name = "txtIdUsuarioGU";
+            this.txtIdUsuarioGU.Size = new System.Drawing.Size(348, 27);
+            this.txtIdUsuarioGU.TabIndex = 5;
             // 
             // label5
             // 
@@ -286,9 +324,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(51, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "IdUsuario";
             // 
             // tbpCerraSesion
             // 
@@ -399,36 +437,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // colUsuarios
-            // 
-            this.colUsuarios.HeaderText = "Usuario";
-            this.colUsuarios.MinimumWidth = 8;
-            this.colUsuarios.Name = "colUsuarios";
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre Completo";
-            this.colNombre.MinimumWidth = 8;
-            this.colNombre.Name = "colNombre";
-            // 
-            // CLMcorreoGU
-            // 
-            this.CLMcorreoGU.HeaderText = "Correo electronico";
-            this.CLMcorreoGU.MinimumWidth = 6;
-            this.CLMcorreoGU.Name = "CLMcorreoGU";
-            // 
-            // CLMtelefonoGU
-            // 
-            this.CLMtelefonoGU.HeaderText = "Telefono";
-            this.CLMtelefonoGU.MinimumWidth = 6;
-            this.CLMtelefonoGU.Name = "CLMtelefonoGU";
-            // 
-            // colRol
-            // 
-            this.colRol.HeaderText = "Rol";
-            this.colRol.MinimumWidth = 8;
-            this.colRol.Name = "colRol";
-            // 
             // frmSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -469,7 +477,7 @@
         private System.Windows.Forms.TextBox txtContraseñaGU;
         private System.Windows.Forms.TextBox txtApellidoGU;
         private System.Windows.Forms.TextBox txtNombreGU;
-        private System.Windows.Forms.TextBox txtUsuarioGU;
+        private System.Windows.Forms.TextBox txtIdUsuarioGU;
         private System.Windows.Forms.DataGridView dgvGUsuarios;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pcbAlerta;
@@ -486,7 +494,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreGU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApellidoGU;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMcorreoGU;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMtelefonoGU;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRol;

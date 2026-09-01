@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Libreria_PAE
 {
-    public partial class frmCatalogos : Form
+    public partial class Form1 : Form
     {
-        public frmCatalogos()
+        public Form1()
         {
             InitializeComponent();
         }
-
-        private void tbpCategoria_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
     }
 }
