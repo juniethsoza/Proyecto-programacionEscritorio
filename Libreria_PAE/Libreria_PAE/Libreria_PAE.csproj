@@ -90,6 +90,7 @@
     <Compile Include="Operaciones.Designer.cs">
       <DependentUpon>Operaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes.cs">
@@ -104,6 +105,7 @@
     <Compile Include="Seguridad.Designer.cs">
       <DependentUpon>Seguridad.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubCategoria.cs" />
     <EmbeddedResource Include="Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
