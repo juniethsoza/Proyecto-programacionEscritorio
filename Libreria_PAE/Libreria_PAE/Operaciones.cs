@@ -17,36 +17,9 @@ namespace Libreria_PAE
             InitializeComponent();
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void tbpCompra_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnBuscarProd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtProductoVF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

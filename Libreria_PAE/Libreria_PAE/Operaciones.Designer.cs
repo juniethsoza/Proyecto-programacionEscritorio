@@ -57,6 +57,9 @@
             this.clPrecioVF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clSubtotalVF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxDatosventaVF = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbClienteVF = new System.Windows.Forms.ComboBox();
             this.txtMontoresividoVF = new System.Windows.Forms.MaskedTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.dtpFechaFactura = new System.Windows.Forms.DateTimePicker();
@@ -64,8 +67,6 @@
             this.txtSubtotalVF = new System.Windows.Forms.TextBox();
             this.txtPrecioVF = new System.Windows.Forms.TextBox();
             this.txtStockVF = new System.Windows.Forms.TextBox();
-            this.txtProductoVF = new System.Windows.Forms.TextBox();
-            this.txtCodigoproductoVF = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFacturaVF = new System.Windows.Forms.TextBox();
             this.txtCantidadVF = new System.Windows.Forms.TextBox();
@@ -78,6 +79,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbpCompra = new System.Windows.Forms.TabPage();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnCancelarCp = new System.Windows.Forms.Button();
             this.btnGuardarCompraCp = new System.Windows.Forms.Button();
@@ -104,10 +108,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbClienteVF = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtCódigoCP = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tbcOperaciones.SuspendLayout();
             this.tbpVentaF.SuspendLayout();
             this.gbxFacturacion.SuspendLayout();
@@ -121,6 +122,7 @@
             // 
             this.tbcOperaciones.Controls.Add(this.tbpVentaF);
             this.tbcOperaciones.Controls.Add(this.tbpCompra);
+            this.tbcOperaciones.Controls.Add(this.tabPage1);
             this.tbcOperaciones.Location = new System.Drawing.Point(-2, 1);
             this.tbcOperaciones.Name = "tbcOperaciones";
             this.tbcOperaciones.SelectedIndex = 0;
@@ -233,7 +235,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(615, 211);
+            this.label14.Location = new System.Drawing.Point(615, 285);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(49, 20);
             this.label14.TabIndex = 5;
@@ -251,7 +253,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(590, 285);
+            this.label12.Location = new System.Drawing.Point(596, 211);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 20);
             this.label12.TabIndex = 3;
@@ -334,7 +336,7 @@
             // 
             // clPrecioVF
             // 
-            this.clPrecioVF.HeaderText = "Precio Unitario";
+            this.clPrecioVF.HeaderText = "Precio por Unidad";
             this.clPrecioVF.MinimumWidth = 8;
             this.clPrecioVF.Name = "clPrecioVF";
             // 
@@ -346,6 +348,8 @@
             // 
             // gbxDatosventaVF
             // 
+            this.gbxDatosventaVF.Controls.Add(this.comboBox2);
+            this.gbxDatosventaVF.Controls.Add(this.comboBox1);
             this.gbxDatosventaVF.Controls.Add(this.cmbClienteVF);
             this.gbxDatosventaVF.Controls.Add(this.txtMontoresividoVF);
             this.gbxDatosventaVF.Controls.Add(this.label23);
@@ -354,8 +358,6 @@
             this.gbxDatosventaVF.Controls.Add(this.txtSubtotalVF);
             this.gbxDatosventaVF.Controls.Add(this.txtPrecioVF);
             this.gbxDatosventaVF.Controls.Add(this.txtStockVF);
-            this.gbxDatosventaVF.Controls.Add(this.txtProductoVF);
-            this.gbxDatosventaVF.Controls.Add(this.txtCodigoproductoVF);
             this.gbxDatosventaVF.Controls.Add(this.label1);
             this.gbxDatosventaVF.Controls.Add(this.txtFacturaVF);
             this.gbxDatosventaVF.Controls.Add(this.txtCantidadVF);
@@ -373,6 +375,30 @@
             this.gbxDatosventaVF.TabIndex = 0;
             this.gbxDatosventaVF.TabStop = false;
             this.gbxDatosventaVF.Text = "Datos de la venta";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(109, 165);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(370, 28);
+            this.comboBox2.TabIndex = 25;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(109, 209);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(370, 28);
+            this.comboBox1.TabIndex = 24;
+            // 
+            // cmbClienteVF
+            // 
+            this.cmbClienteVF.FormattingEnabled = true;
+            this.cmbClienteVF.Location = new System.Drawing.Point(109, 117);
+            this.cmbClienteVF.Name = "cmbClienteVF";
+            this.cmbClienteVF.Size = new System.Drawing.Size(216, 28);
+            this.cmbClienteVF.TabIndex = 23;
             // 
             // txtMontoresividoVF
             // 
@@ -401,7 +427,7 @@
             // 
             this.btnBuscarVF.BackColor = System.Drawing.Color.Purple;
             this.btnBuscarVF.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarVF.Location = new System.Drawing.Point(348, 160);
+            this.btnBuscarVF.Location = new System.Drawing.Point(333, 111);
             this.btnBuscarVF.Name = "btnBuscarVF";
             this.btnBuscarVF.Size = new System.Drawing.Size(155, 43);
             this.btnBuscarVF.TabIndex = 18;
@@ -421,7 +447,6 @@
             this.txtPrecioVF.Name = "txtPrecioVF";
             this.txtPrecioVF.Size = new System.Drawing.Size(163, 27);
             this.txtPrecioVF.TabIndex = 15;
-            this.txtPrecioVF.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // txtStockVF
             // 
@@ -429,21 +454,6 @@
             this.txtStockVF.Name = "txtStockVF";
             this.txtStockVF.Size = new System.Drawing.Size(64, 27);
             this.txtStockVF.TabIndex = 14;
-            // 
-            // txtProductoVF
-            // 
-            this.txtProductoVF.Location = new System.Drawing.Point(109, 219);
-            this.txtProductoVF.Name = "txtProductoVF";
-            this.txtProductoVF.Size = new System.Drawing.Size(256, 27);
-            this.txtProductoVF.TabIndex = 13;
-            this.txtProductoVF.TextChanged += new System.EventHandler(this.txtProductoVF_TextChanged);
-            // 
-            // txtCodigoproductoVF
-            // 
-            this.txtCodigoproductoVF.Location = new System.Drawing.Point(109, 168);
-            this.txtCodigoproductoVF.Name = "txtCodigoproductoVF";
-            this.txtCodigoproductoVF.Size = new System.Drawing.Size(233, 27);
-            this.txtCodigoproductoVF.TabIndex = 9;
             // 
             // label1
             // 
@@ -516,11 +526,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(586, 78);
+            this.label4.Location = new System.Drawing.Point(565, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 20);
+            this.label4.Size = new System.Drawing.Size(149, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Precio unitario";
+            this.label4.Text = "Precio por unidad";
             // 
             // label3
             // 
@@ -543,9 +553,9 @@
             // tbpCompra
             // 
             this.tbpCompra.BackColor = System.Drawing.Color.Thistle;
-            this.tbpCompra.Controls.Add(this.txtCódigoCP);
+            this.tbpCompra.Controls.Add(this.comboBox4);
+            this.tbpCompra.Controls.Add(this.comboBox3);
             this.tbpCompra.Controls.Add(this.label24);
-            this.tbpCompra.Controls.Add(this.textBox1);
             this.tbpCompra.Controls.Add(this.btnAñadir);
             this.tbpCompra.Controls.Add(this.btnCancelarCp);
             this.tbpCompra.Controls.Add(this.btnGuardarCompraCp);
@@ -573,6 +583,32 @@
             this.tbpCompra.Size = new System.Drawing.Size(1165, 802);
             this.tbpCompra.TabIndex = 1;
             this.tbpCompra.Text = "Compra";
+            this.tbpCompra.Click += new System.EventHandler(this.tbpCompra_Click);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(714, 87);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(354, 28);
+            this.comboBox4.TabIndex = 33;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(715, 44);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(353, 28);
+            this.comboBox3.TabIndex = 32;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(612, 52);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(63, 20);
+            this.label24.TabIndex = 31;
+            this.label24.Text = "Código";
             // 
             // btnAñadir
             // 
@@ -590,7 +626,7 @@
             this.btnCancelarCp.ForeColor = System.Drawing.Color.White;
             this.btnCancelarCp.Location = new System.Drawing.Point(914, 660);
             this.btnCancelarCp.Name = "btnCancelarCp";
-            this.btnCancelarCp.Size = new System.Drawing.Size(181, 50);
+            this.btnCancelarCp.Size = new System.Drawing.Size(164, 50);
             this.btnCancelarCp.TabIndex = 28;
             this.btnCancelarCp.Text = "Cancelar";
             this.btnCancelarCp.UseVisualStyleBackColor = false;
@@ -664,7 +700,7 @@
             this.dgvCompra.RowHeadersVisible = false;
             this.dgvCompra.RowHeadersWidth = 62;
             this.dgvCompra.RowTemplate.Height = 28;
-            this.dgvCompra.Size = new System.Drawing.Size(1066, 275);
+            this.dgvCompra.Size = new System.Drawing.Size(1048, 275);
             this.dgvCompra.TabIndex = 24;
             // 
             // clProductoCp
@@ -695,21 +731,21 @@
             // 
             this.txtPrecioVentaCp.Location = new System.Drawing.Point(715, 221);
             this.txtPrecioVentaCp.Name = "txtPrecioVentaCp";
-            this.txtPrecioVentaCp.Size = new System.Drawing.Size(380, 27);
+            this.txtPrecioVentaCp.Size = new System.Drawing.Size(353, 27);
             this.txtPrecioVentaCp.TabIndex = 23;
             // 
             // txtCostoCompraCp
             // 
             this.txtCostoCompraCp.Location = new System.Drawing.Point(715, 182);
             this.txtCostoCompraCp.Name = "txtCostoCompraCp";
-            this.txtCostoCompraCp.Size = new System.Drawing.Size(380, 27);
+            this.txtCostoCompraCp.Size = new System.Drawing.Size(353, 27);
             this.txtCostoCompraCp.TabIndex = 22;
             // 
             // txtCantidadCp
             // 
             this.txtCantidadCp.Location = new System.Drawing.Point(715, 139);
             this.txtCantidadCp.Name = "txtCantidadCp";
-            this.txtCantidadCp.Size = new System.Drawing.Size(380, 27);
+            this.txtCantidadCp.Size = new System.Drawing.Size(353, 27);
             this.txtCantidadCp.TabIndex = 21;
             // 
             // btnAgregarListaCp
@@ -733,7 +769,6 @@
             this.btnAgregarCp.TabIndex = 16;
             this.btnAgregarCp.Text = "Agregar";
             this.btnAgregarCp.UseVisualStyleBackColor = false;
-            this.btnAgregarCp.Click += new System.EventHandler(this.button2_Click);
             // 
             // dtpFechaCP
             // 
@@ -792,7 +827,6 @@
             this.label18.Size = new System.Drawing.Size(81, 20);
             this.label18.TabIndex = 3;
             this.label18.Text = "Producto";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
@@ -830,43 +864,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // cmbClienteVF
+            // tabPage1
             // 
-            this.cmbClienteVF.FormattingEnabled = true;
-            this.cmbClienteVF.Location = new System.Drawing.Point(109, 117);
-            this.cmbClienteVF.Name = "cmbClienteVF";
-            this.cmbClienteVF.Size = new System.Drawing.Size(379, 28);
-            this.cmbClienteVF.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(715, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 27);
-            this.textBox1.TabIndex = 30;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(612, 52);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(63, 20);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "Código";
-            // 
-            // txtCódigoCP
-            // 
-            this.txtCódigoCP.Location = new System.Drawing.Point(715, 45);
-            this.txtCódigoCP.Name = "txtCódigoCP";
-            this.txtCódigoCP.Size = new System.Drawing.Size(380, 27);
-            this.txtCódigoCP.TabIndex = 32;
+            this.tabPage1.BackColor = System.Drawing.Color.Thistle;
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1165, 802);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Producto solicitado ";
             // 
             // frmOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(1156, 772);
+            this.ClientSize = new System.Drawing.Size(1082, 788);
             this.Controls.Add(this.tbcOperaciones);
             this.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -894,13 +907,10 @@
         private System.Windows.Forms.TabPage tbpCompra;
         private System.Windows.Forms.GroupBox gbxFacturacion;
         private System.Windows.Forms.GroupBox gbxDatosventaVF;
-        private System.Windows.Forms.Button btnBuscarVF;
         private System.Windows.Forms.TextBox txtSubtotalVF;
         private System.Windows.Forms.TextBox txtPrecioVF;
-        private System.Windows.Forms.TextBox txtProductoVF;
         private System.Windows.Forms.TextBox txtFacturaVF;
         private System.Windows.Forms.TextBox txtCantidadVF;
-        private System.Windows.Forms.TextBox txtCodigoproductoVF;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -925,11 +935,6 @@
         private System.Windows.Forms.MaskedTextBox txtCambioVF;
         private System.Windows.Forms.MaskedTextBox txtMontoVF;
         private System.Windows.Forms.TextBox txtSubVf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clCodigoVf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clCantidadVf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clPrecioVF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clSubtotalVF;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -960,9 +965,18 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtMontoresividoVF;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox cmbClienteVF;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtCódigoCP;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbClienteVF;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnBuscarVF;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clCodigoVf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clCantidadVf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPrecioVF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clSubtotalVF;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

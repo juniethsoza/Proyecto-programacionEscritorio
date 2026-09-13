@@ -44,6 +44,10 @@
             this.CLMmínimoCs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLMestadoCs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBuscarProucto = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.CBAlerta = new System.Windows.Forms.CheckBox();
             this.CMBcatgoría = new System.Windows.Forms.ComboBox();
@@ -73,6 +77,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tcConsultarstk.SuspendLayout();
             this.TCconsultarStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoCs)).BeginInit();
@@ -85,6 +90,7 @@
             // 
             this.tcConsultarstk.Controls.Add(this.TCconsultarStock);
             this.tcConsultarstk.Controls.Add(this.TBreportesVentas);
+            this.tcConsultarstk.Controls.Add(this.tabPage1);
             this.tcConsultarstk.Location = new System.Drawing.Point(3, 1);
             this.tcConsultarstk.Name = "tcConsultarstk";
             this.tcConsultarstk.SelectedIndex = 0;
@@ -191,6 +197,10 @@
             // 
             // gbBuscarProucto
             // 
+            this.gbBuscarProucto.Controls.Add(this.button1);
+            this.gbBuscarProucto.Controls.Add(this.textBox1);
+            this.gbBuscarProucto.Controls.Add(this.radioButton2);
+            this.gbBuscarProucto.Controls.Add(this.radioButton1);
             this.gbBuscarProucto.Controls.Add(this.btnBuscar);
             this.gbBuscarProucto.Controls.Add(this.CBAlerta);
             this.gbBuscarProucto.Controls.Add(this.CMBcatgoría);
@@ -204,11 +214,51 @@
             this.gbBuscarProucto.TabStop = false;
             this.gbBuscarProucto.Text = "Buscar Producto";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Purple;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(689, 90);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 57);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(144, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(176, 27);
+            this.textBox1.TabIndex = 8;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(34, 72);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(46, 24);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Id";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(34, 29);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(94, 24);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Nombre";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Purple;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(689, 90);
+            this.btnBuscar.Location = new System.Drawing.Point(559, 90);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 57);
             this.btnBuscar.TabIndex = 5;
@@ -218,7 +268,7 @@
             // CBAlerta
             // 
             this.CBAlerta.AutoSize = true;
-            this.CBAlerta.Location = new System.Drawing.Point(58, 104);
+            this.CBAlerta.Location = new System.Drawing.Point(34, 129);
             this.CBAlerta.Name = "CBAlerta";
             this.CBAlerta.Size = new System.Drawing.Size(123, 24);
             this.CBAlerta.TabIndex = 4;
@@ -228,14 +278,14 @@
             // CMBcatgoría
             // 
             this.CMBcatgoría.FormattingEnabled = true;
-            this.CMBcatgoría.Location = new System.Drawing.Point(595, 46);
+            this.CMBcatgoría.Location = new System.Drawing.Point(504, 29);
             this.CMBcatgoría.Name = "CMBcatgoría";
             this.CMBcatgoría.Size = new System.Drawing.Size(179, 28);
             this.CMBcatgoría.TabIndex = 3;
             // 
             // tbNombreCod
             // 
-            this.tbNombreCod.Location = new System.Drawing.Point(203, 46);
+            this.tbNombreCod.Location = new System.Drawing.Point(144, 26);
             this.tbNombreCod.Name = "tbNombreCod";
             this.tbNombreCod.Size = new System.Drawing.Size(176, 27);
             this.tbNombreCod.TabIndex = 2;
@@ -243,7 +293,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(497, 50);
+            this.label2.Location = new System.Drawing.Point(389, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 1;
@@ -254,9 +304,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(54, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 20);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre o código";
             // 
             // TBreportesVentas
             // 
@@ -456,6 +505,16 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Thistle;
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(988, 516);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Movimiento de iventario";
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -523,5 +582,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMnumFacturaRV;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMFechaRV;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMTotalVentaRV;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

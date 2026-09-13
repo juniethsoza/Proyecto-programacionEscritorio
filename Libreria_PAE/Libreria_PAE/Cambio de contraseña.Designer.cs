@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 30);
+            this.label1.Location = new System.Drawing.Point(279, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 17);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 92);
+            this.label2.Location = new System.Drawing.Point(50, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(220, 17);
             this.label2.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 159);
+            this.label3.Location = new System.Drawing.Point(24, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 17);
             this.label3.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 249);
+            this.label4.Location = new System.Drawing.Point(12, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(205, 17);
             this.label4.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(429, 249);
+            this.label5.Location = new System.Drawing.Point(419, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 17);
             this.label5.TabIndex = 4;
@@ -96,7 +96,7 @@
             this.btnCambiar.BackColor = System.Drawing.Color.Purple;
             this.btnCambiar.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiar.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar.Location = new System.Drawing.Point(140, 353);
+            this.btnCambiar.Location = new System.Drawing.Point(109, 311);
             this.btnCambiar.Name = "btnCambiar";
             this.btnCambiar.Size = new System.Drawing.Size(182, 33);
             this.btnCambiar.TabIndex = 6;
@@ -107,7 +107,7 @@
             // txtCorreoTelefono
             // 
             this.txtCorreoTelefono.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoTelefono.Location = new System.Drawing.Point(349, 84);
+            this.txtCorreoTelefono.Location = new System.Drawing.Point(276, 79);
             this.txtCorreoTelefono.Name = "txtCorreoTelefono";
             this.txtCorreoTelefono.Size = new System.Drawing.Size(290, 25);
             this.txtCorreoTelefono.TabIndex = 7;
@@ -115,7 +115,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(349, 151);
+            this.txtCodigo.Location = new System.Drawing.Point(276, 130);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(169, 25);
             this.txtCodigo.TabIndex = 8;
@@ -124,7 +124,7 @@
             // txtNuevaContraseña
             // 
             this.txtNuevaContraseña.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaContraseña.Location = new System.Drawing.Point(233, 246);
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(223, 209);
             this.txtNuevaContraseña.Name = "txtNuevaContraseña";
             this.txtNuevaContraseña.Size = new System.Drawing.Size(164, 25);
             this.txtNuevaContraseña.TabIndex = 9;
@@ -132,7 +132,7 @@
             // txtConfirmarContraseña
             // 
             this.txtConfirmarContraseña.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarContraseña.Location = new System.Drawing.Point(613, 246);
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(613, 217);
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(175, 25);
             this.txtConfirmarContraseña.TabIndex = 10;
@@ -142,7 +142,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Purple;
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(504, 353);
+            this.btnCancelar.Location = new System.Drawing.Point(499, 311);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(163, 33);
             this.btnCancelar.TabIndex = 11;

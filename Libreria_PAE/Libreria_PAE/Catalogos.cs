@@ -17,9 +17,6 @@ namespace Libreria_PAE
             InitializeComponent();
         }
 
-        private void tbpCategoria_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
