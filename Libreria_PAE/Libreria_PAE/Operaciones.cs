@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace Libreria_PAE
 {
-    public partial class frmSeguridad : Form
+    public partial class frmOperaciones : Form
     {
-        public frmSeguridad()
+        public frmOperaciones()
         {
             InitializeComponent();
         }
 
-        private void dgvGUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tbpCompra_Click(object sender, EventArgs e)
         {
 
         }
-
-       
     }
 }

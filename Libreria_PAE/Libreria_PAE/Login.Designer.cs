@@ -47,7 +47,7 @@
             this.label1.Location = new System.Drawing.Point(135, 255);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 23);
+            this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario:";
             // 
@@ -58,7 +58,7 @@
             this.label2.Location = new System.Drawing.Point(124, 305);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 23);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña:";
             // 
@@ -68,7 +68,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(252, 241);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(494, 44);
+            this.txtUsuario.Size = new System.Drawing.Size(494, 38);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtContraseña
@@ -78,7 +78,7 @@
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(494, 44);
+            this.txtContraseña.Size = new System.Drawing.Size(494, 38);
             this.txtContraseña.TabIndex = 2;
             // 
             // cbMostrarPW
@@ -88,7 +88,7 @@
             this.cbMostrarPW.Location = new System.Drawing.Point(388, 346);
             this.cbMostrarPW.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbMostrarPW.Name = "cbMostrarPW";
-            this.cbMostrarPW.Size = new System.Drawing.Size(215, 27);
+            this.cbMostrarPW.Size = new System.Drawing.Size(185, 24);
             this.cbMostrarPW.TabIndex = 5;
             this.cbMostrarPW.Text = "Mostrar contraseña";
             this.cbMostrarPW.UseVisualStyleBackColor = true;
@@ -100,10 +100,11 @@
             this.linkLabel1.Location = new System.Drawing.Point(384, 385);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(218, 23);
+            this.linkLabel1.Size = new System.Drawing.Size(189, 20);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Olvidó su contraseña?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btnIngresar
             // 
@@ -133,6 +134,7 @@
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureBox1
             // 
@@ -147,7 +149,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(973, 477);
