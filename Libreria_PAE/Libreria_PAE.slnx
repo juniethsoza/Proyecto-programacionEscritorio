@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="Libreria_PAE/Libreria_PAE.csproj" Id="bd55c8ae-b905-4a3a-b95e-da8c7a92a071" />
+  <Project Path="CapaDato/CapaDato.csproj" Id="56637de1-2c85-49b8-bec0-d4499292f84e" />
+  <Project Path="CapaNegocio/CapaNegocio.csproj" Id="c75dd6d8-0daf-4353-a361-454766dcfcbe" />
+  <Project Path="Entidades/Entidades.csproj" Id="3bcae174-a841-46b4-913f-2f3b0e650330" />
+  <Project Path="Libreria_PAE/CapaPresentacion.csproj" Id="bd55c8ae-b905-4a3a-b95e-da8c7a92a071" />
 </Solution>

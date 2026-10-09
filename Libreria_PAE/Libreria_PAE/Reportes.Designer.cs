@@ -44,10 +44,6 @@
             this.CLMmínimoCs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLMestadoCs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBuscarProucto = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.CBAlerta = new System.Windows.Forms.CheckBox();
             this.CMBcatgoría = new System.Windows.Forms.ComboBox();
@@ -77,7 +73,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tcConsultarstk.SuspendLayout();
             this.TCconsultarStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoCs)).BeginInit();
@@ -90,7 +85,6 @@
             // 
             this.tcConsultarstk.Controls.Add(this.TCconsultarStock);
             this.tcConsultarstk.Controls.Add(this.TBreportesVentas);
-            this.tcConsultarstk.Controls.Add(this.tabPage1);
             this.tcConsultarstk.Location = new System.Drawing.Point(3, 1);
             this.tcConsultarstk.Name = "tcConsultarstk";
             this.tcConsultarstk.SelectedIndex = 0;
@@ -103,10 +97,10 @@
             this.TCconsultarStock.Controls.Add(this.btnCerrarCS);
             this.TCconsultarStock.Controls.Add(this.dgvInfoCs);
             this.TCconsultarStock.Controls.Add(this.gbBuscarProucto);
-            this.TCconsultarStock.Location = new System.Drawing.Point(4, 29);
+            this.TCconsultarStock.Location = new System.Drawing.Point(4, 32);
             this.TCconsultarStock.Name = "TCconsultarStock";
             this.TCconsultarStock.Padding = new System.Windows.Forms.Padding(3);
-            this.TCconsultarStock.Size = new System.Drawing.Size(988, 516);
+            this.TCconsultarStock.Size = new System.Drawing.Size(988, 513);
             this.TCconsultarStock.TabIndex = 0;
             this.TCconsultarStock.Text = "Consultar stock";
             // 
@@ -197,10 +191,6 @@
             // 
             // gbBuscarProucto
             // 
-            this.gbBuscarProucto.Controls.Add(this.button1);
-            this.gbBuscarProucto.Controls.Add(this.textBox1);
-            this.gbBuscarProucto.Controls.Add(this.radioButton2);
-            this.gbBuscarProucto.Controls.Add(this.radioButton1);
             this.gbBuscarProucto.Controls.Add(this.btnBuscar);
             this.gbBuscarProucto.Controls.Add(this.CBAlerta);
             this.gbBuscarProucto.Controls.Add(this.CMBcatgoría);
@@ -214,51 +204,11 @@
             this.gbBuscarProucto.TabStop = false;
             this.gbBuscarProucto.Text = "Buscar Producto";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Purple;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(689, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 57);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Cerrar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(144, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 27);
-            this.textBox1.TabIndex = 8;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(34, 72);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(46, 24);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Id";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(34, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 24);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nombre";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Purple;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(559, 90);
+            this.btnBuscar.Location = new System.Drawing.Point(689, 90);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 57);
             this.btnBuscar.TabIndex = 5;
@@ -268,9 +218,9 @@
             // CBAlerta
             // 
             this.CBAlerta.AutoSize = true;
-            this.CBAlerta.Location = new System.Drawing.Point(34, 129);
+            this.CBAlerta.Location = new System.Drawing.Point(58, 104);
             this.CBAlerta.Name = "CBAlerta";
-            this.CBAlerta.Size = new System.Drawing.Size(123, 24);
+            this.CBAlerta.Size = new System.Drawing.Size(151, 29);
             this.CBAlerta.TabIndex = 4;
             this.CBAlerta.Text = "Solo alertas";
             this.CBAlerta.UseVisualStyleBackColor = true;
@@ -278,24 +228,24 @@
             // CMBcatgoría
             // 
             this.CMBcatgoría.FormattingEnabled = true;
-            this.CMBcatgoría.Location = new System.Drawing.Point(504, 29);
+            this.CMBcatgoría.Location = new System.Drawing.Point(595, 46);
             this.CMBcatgoría.Name = "CMBcatgoría";
-            this.CMBcatgoría.Size = new System.Drawing.Size(179, 28);
+            this.CMBcatgoría.Size = new System.Drawing.Size(179, 31);
             this.CMBcatgoría.TabIndex = 3;
             // 
             // tbNombreCod
             // 
-            this.tbNombreCod.Location = new System.Drawing.Point(144, 26);
+            this.tbNombreCod.Location = new System.Drawing.Point(203, 46);
             this.tbNombreCod.Name = "tbNombreCod";
-            this.tbNombreCod.Size = new System.Drawing.Size(176, 27);
+            this.tbNombreCod.Size = new System.Drawing.Size(176, 31);
             this.tbNombreCod.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(389, 29);
+            this.label2.Location = new System.Drawing.Point(497, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Categorías";
             // 
@@ -304,8 +254,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(54, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.Size = new System.Drawing.Size(177, 25);
             this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre o código";
             // 
             // TBreportesVentas
             // 
@@ -319,10 +270,10 @@
             this.TBreportesVentas.Controls.Add(this.label5);
             this.TBreportesVentas.Controls.Add(this.label4);
             this.TBreportesVentas.Controls.Add(this.label3);
-            this.TBreportesVentas.Location = new System.Drawing.Point(4, 29);
+            this.TBreportesVentas.Location = new System.Drawing.Point(4, 32);
             this.TBreportesVentas.Name = "TBreportesVentas";
             this.TBreportesVentas.Padding = new System.Windows.Forms.Padding(3);
-            this.TBreportesVentas.Size = new System.Drawing.Size(988, 516);
+            this.TBreportesVentas.Size = new System.Drawing.Size(988, 513);
             this.TBreportesVentas.TabIndex = 1;
             this.TBreportesVentas.Text = "Reportes de Ventas";
             // 
@@ -376,7 +327,7 @@
             // 
             this.tbTotalVendidoRV.Location = new System.Drawing.Point(663, 394);
             this.tbTotalVendidoRV.Name = "tbTotalVendidoRV";
-            this.tbTotalVendidoRV.Size = new System.Drawing.Size(151, 27);
+            this.tbTotalVendidoRV.Size = new System.Drawing.Size(151, 31);
             this.tbTotalVendidoRV.TabIndex = 8;
             // 
             // btnCerrarRV
@@ -406,7 +357,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(462, 86);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(175, 28);
+            this.comboBox3.Size = new System.Drawing.Size(175, 31);
             this.comboBox3.TabIndex = 5;
             // 
             // comboBox1
@@ -414,7 +365,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(158, 86);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 28);
+            this.comboBox1.Size = new System.Drawing.Size(185, 31);
             this.comboBox1.TabIndex = 3;
             // 
             // label5
@@ -422,7 +373,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(536, 397);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 20);
+            this.label5.Size = new System.Drawing.Size(150, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Total vendido:";
             // 
@@ -431,7 +382,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(398, 89);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
+            this.label4.Size = new System.Drawing.Size(73, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Hasta:";
             // 
@@ -440,7 +391,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(90, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Desde:";
             // 
@@ -505,19 +456,9 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Thistle;
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(988, 516);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Movimiento de iventario";
-            // 
             // Reportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(978, 528);
@@ -582,10 +523,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMnumFacturaRV;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMFechaRV;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLMTotalVentaRV;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TabPage tabPage1;
     }
 }
