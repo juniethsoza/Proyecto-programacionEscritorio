@@ -16,7 +16,7 @@ namespace Libreria_PAE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmCatalogos());
         }
     }
 }
