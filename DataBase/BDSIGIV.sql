@@ -657,4 +657,5 @@ ELSE
       SELECT NULL AS IdUsuario;
     END
 END;
+
 GO

@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="CapaDato/CapaDato.csproj" Id="56637de1-2c85-49b8-bec0-d4499292f84e" />
-  <Project Path="CapaNegocio/CapaNegocio.csproj" Id="c75dd6d8-0daf-4353-a361-454766dcfcbe" />
-  <Project Path="Entidades/Entidades.csproj" Id="3bcae174-a841-46b4-913f-2f3b0e650330" />
-  <Project Path="Libreria_PAE/CapaPresentacion.csproj" Id="bd55c8ae-b905-4a3a-b95e-da8c7a92a071" />
+  <Project Path="CapaDatos/CapaDatos.csproj" Id="0ec99847-3789-4e4f-aa1f-5db943522181" />
+  <Project Path="CapaNegocio/CapaNegocio.csproj" Id="822b88a0-2bee-41b7-a8ae-3d3fc23323e2" />
+  <Project Path="Entidades/Entidades.csproj" Id="ebc04d43-a721-4755-b81a-0cfa6114c2f7" />
+  <Project Path="CapaPresentacion/CapaPresentacion.csproj" Id="bd55c8ae-b905-4a3a-b95e-da8c7a92a071" />
 </Solution>

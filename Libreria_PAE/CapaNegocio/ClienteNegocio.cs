@@ -1,84 +1,86 @@
-﻿using CapaDato;
-using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using CapaDato;
+using ClienteEntidad = Entidades.Cliente;
 
 namespace CapaNegocio
 {
     public class ClienteNegocio
     {
-        private readonly ClienteDatos datos = new ClienteDatos();
+        private readonly ClienteDatos clienteDatos;
 
-        public bool Insertar(Cliente cliente)
+        public ClienteNegocio()
         {
-            if (string.IsNullOrWhiteSpace(cliente.Nombre))
-                throw new Exception("El nombre del cliente es obligatorio.");
-
-            if (string.IsNullOrWhiteSpace(cliente.Apellido))
-                throw new Exception("El apellido del cliente es obligatorio.");
-            try
-            {
-                return datos.Insertar(cliente);
-            }
-            catch (Microsoft.Data.SqlClient.SqlException ex)
-            {
-                if (ex.Number == 2627 || ex.Number == 2601)
-                {
-                    throw new Exception("El número de teléfono ingresado ya está registrado con otro cliente.");
-                }
-                throw;
-            }
-
-           
+            clienteDatos = new ClienteDatos();
         }
 
-        public bool Actualizar(Cliente cliente)
+        public List<ClienteEntidad> Consultar()
         {
-            if (cliente.IdCliente <= 0)
-                throw new Exception("Debe seleccionar un cliente válido para actualizar.");
+            return clienteDatos.ConsultarTodos();
+        }
 
-            if (string.IsNullOrWhiteSpace(cliente.Nombre))
-                throw new Exception("El nombre del cliente es obligatorio.");
+        public ClienteEntidad Buscar(int idCliente)
+        {
+            ValidarIdCliente(idCliente);
+            return clienteDatos.Buscar(idCliente);
+        }
 
-            if (string.IsNullOrWhiteSpace(cliente.Apellido))
-                throw new Exception("El apellido del cliente es obligatorio.");
+        public List<ClienteEntidad> Filtrar(string texto)
+        {
+            return clienteDatos.Filtrar(texto);
+        }
 
-            try
+        public bool Insertar(ClienteEntidad cliente)
+        {
+            ValidarCliente(cliente);
+            return clienteDatos.Insertar(cliente);
+        }
+
+        public bool Actualizar(ClienteEntidad cliente)
+        {
+            if (cliente == null || cliente.IdCliente <= 0)
             {
-                return datos.Actualizar(cliente);
+                throw new ArgumentException("Debe seleccionar un cliente válido para actualizar.");
             }
-            catch (Microsoft.Data.SqlClient.SqlException ex)
-            {
-                if (ex.Number == 2627 || ex.Number == 2601)
-                {
-                    throw new Exception("El número de teléfono ingresado ya está registrado con otro cliente.");
-                }
-                throw;
-            }
+
+            ValidarCliente(cliente);
+            return clienteDatos.Actualizar(cliente);
         }
 
         public bool Eliminar(int idCliente)
         {
+            ValidarIdCliente(idCliente);
+            return clienteDatos.Eliminar(idCliente);
+        }
+
+        private void ValidarCliente(ClienteEntidad cliente)
+        {
+            if (cliente == null)
+            {
+                throw new ArgumentNullException(nameof(cliente), "Los datos del cliente son obligatorios.");
+            }
+
+            if (string.IsNullOrWhiteSpace(cliente.Nombre))
+            {
+                throw new ArgumentException("El nombre del cliente es obligatorio.");
+            }
+
+            if (string.IsNullOrWhiteSpace(cliente.Apellido))
+            {
+                throw new ArgumentException("El apellido del cliente es obligatorio.");
+            }
+
+            cliente.Nombre = cliente.Nombre.Trim();
+            cliente.Apellido = cliente.Apellido.Trim();
+            cliente.Telefono = string.IsNullOrWhiteSpace(cliente.Telefono) ? null : cliente.Telefono.Trim();
+        }
+
+        private void ValidarIdCliente(int idCliente)
+        {
             if (idCliente <= 0)
-                throw new Exception("Debe seleccionar un cliente válido para dar de baja.");
-
-            return datos.Eliminar(idCliente);
-        }
-
-        public List<Cliente> ConsultarTodos()
-        {
-            return datos.ConsultarTodos()
-                .OrderBy(c => c.IdCliente) 
-                .ToList(); ;
-        }
-
-        public List<Cliente> Filtrar(string filtro)
-        {
-            if (string.IsNullOrWhiteSpace(filtro))
-                return datos.ConsultarTodos();
-
-            return datos.Filtrar(filtro);
+            {
+                throw new ArgumentException("El identificador del cliente no es válido.");
+            }
         }
     }
 }

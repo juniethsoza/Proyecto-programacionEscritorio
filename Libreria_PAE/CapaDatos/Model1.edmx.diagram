@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="591bc4147fac4bc999f5a39e8cab09aa" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="BDSIGIVModel.Categoria" Width="1.5" PointX="3.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Cliente" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Compra" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.DetalleCompra" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.DetalleFactura" Width="1.5" PointX="10.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Factura" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.MovimientoInventario" Width="1.5" PointX="13.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Permiso" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Producto" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.ProductoSolicitado" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Proveedor" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Rol" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.RolPermiso" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.SubCategoria" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.Usuario" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.vw_ComprasResumen" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.vw_MovimientosInventario" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.vw_ProductosDetalle" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.vw_SolicitudesProductos" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.vw_Usuarios" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDSIGIVModel.vw_VentasResumen" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BDSIGIVModel.FK_SubCategoria_CategoriaID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_Factura_ClienteID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_Compra_ProveedorID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_Compra_UsuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_DetalleCompra_CompraID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_MovimientoInventario_CompraID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_DetalleCompra_ProductoID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_DetalleFactura_FacturaID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_DetalleFactura_ProductoID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_Factura_UsuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_MovimientoInventario_FacturaID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_MovimientoInventario_ProductoID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_MovimientoInventario_UsuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_RolPermiso_PermisoID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_Producto_SubCategoriaID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.fk_ProductoSolicitado_UsuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_RolPermiso_RolID" ManuallyRouted="false" />
+        <AssociationConnector Association="BDSIGIVModel.FK_Usuario_RolID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
