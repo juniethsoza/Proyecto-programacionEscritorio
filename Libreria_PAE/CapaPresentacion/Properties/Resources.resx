@@ -124,6 +124,9 @@
   <data name="Editar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Editar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ElimRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElimRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Reportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +163,9 @@
   <data name="Agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Seguridad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seguridad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,7 +175,7 @@
   <data name="Imprimir1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imprimir1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Seguridad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Seguridad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EliRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EliRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

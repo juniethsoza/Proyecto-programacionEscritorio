@@ -16,29 +16,29 @@ namespace Libreria_PAE
         public frmCatalogos()
         {
             InitializeComponent();
-            dgvCliente.RowPostPaint += dgvCliente_RowPostPaint;
-
-            if (tbcCatalogo.TabPages.Contains(tbpCategoria)) tbcCatalogo.TabPages.Remove(tbpCategoria);
-            if (tbcCatalogo.TabPages.Contains(tbpProducto)) tbcCatalogo.TabPages.Remove(tbpProducto);
-            if (tbcCatalogo.TabPages.Contains(tbpProveedor)) tbcCatalogo.TabPages.Remove(tbpProveedor);
-
-            if (tbcCatalogo.TabPages.Contains(tbpCliente))
-            {
-                tbcCatalogo.SelectedTab = tbpCliente;
-            }
+     
         }
 
         private void frmCatalogos_Load(object sender, EventArgs e)
         {
             if (cmbOrdenar.Items.Count == 0)
             {
+                cmbOrdenar.DropDownStyle = ComboBoxStyle.DropDownList;
                 cmbOrdenar.Items.Add("A-Z");
                 cmbOrdenar.Items.Add("Z-A");
-                cmbOrdenar.SelectedIndex = 0; 
+                cmbOrdenar.SelectedIndex = 0;
             }
 
-            rbNombre.Checked = true; 
-            CargarClientes();
+            if (cmbNombre.Items.Count == 0)
+            {
+                cmbNombre.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbNombre.Items.Add("Nombre");
+                cmbNombre.Items.Add("Apellido");
+                cmbNombre.SelectedIndex = 0;
+            }
+
+            dgvCliente.ColumnHeadersVisible = true;
+
             CargarClientes();
         }
 
@@ -49,6 +49,8 @@ namespace Libreria_PAE
                 string filtro = txtFiltrar != null ? txtFiltrar.Text.Trim() : "";
                 List<Cliente> lista = negocio.Filtrar(filtro);
 
+                if (lista == null) lista = new List<Cliente>();
+
                 Cliente consumidorGeneral = lista.FirstOrDefault(c => c.Nombre == "Consumidor" && c.Apellido == "General");
 
                 if (consumidorGeneral != null)
@@ -56,19 +58,20 @@ namespace Libreria_PAE
                     lista.Remove(consumidorGeneral);
                 }
 
-                if (rbApellido != null && rbApellido.Checked)
+                bool ordenarPorApellido = (cmbNombre != null && cmbNombre.SelectedItem?.ToString() == "Apellido");
+                bool esDescendente = (cmbOrdenar != null && cmbOrdenar.SelectedItem?.ToString() == "Z-A");
+
+                if (ordenarPorApellido)
                 {
-                    if (cmbOrdenar != null && cmbOrdenar.Text == "Z-A")
-                        lista = lista.OrderByDescending(c => c.Apellido).ToList();
-                    else
-                        lista = lista.OrderBy(c => c.Apellido).ToList();
+                    lista = esDescendente
+                        ? lista.OrderByDescending(c => c.Apellido ?? string.Empty).ToList()
+                        : lista.OrderBy(c => c.Apellido ?? string.Empty).ToList();
                 }
-                else 
+                else
                 {
-                    if (cmbOrdenar != null && cmbOrdenar.Text == "Z-A")
-                        lista = lista.OrderByDescending(c => c.Nombre).ToList();
-                    else
-                        lista = lista.OrderBy(c => c.Nombre).ToList();
+                    lista = esDescendente
+                        ? lista.OrderByDescending(c => c.Nombre ?? string.Empty).ToList()
+                        : lista.OrderBy(c => c.Nombre ?? string.Empty).ToList();
                 }
 
                 if (consumidorGeneral != null)
@@ -87,6 +90,9 @@ namespace Libreria_PAE
                     if (dgvCliente.Columns["Estado"] != null)
                         dgvCliente.Columns["Estado"].Visible = false;
 
+                    if (dgvCliente.Columns["CreatedAt"] != null)
+                        dgvCliente.Columns["CreatedAt"].Visible = false;
+
                     if (dgvCliente.Columns["Nombre"] != null)
                         dgvCliente.Columns["Nombre"].HeaderText = "Nombre";
 
@@ -96,15 +102,31 @@ namespace Libreria_PAE
                     if (dgvCliente.Columns["Telefono"] != null)
                         dgvCliente.Columns["Telefono"].HeaderText = "Teléfono";
 
-                    if (dgvCliente.Columns["CreatedAt"] != null)
-                        dgvCliente.Columns["CreatedAt"].HeaderText = "Fecha Registro";
-
                     dgvCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    dgvCliente.EnableHeadersVisualStyles = false;
+                    Color colorLila = Color.FromArgb(225, 213, 248);
+                    Color colorTexto = Color.FromArgb(30, 30, 30);
+
+                    dgvCliente.ColumnHeadersDefaultCellStyle.BackColor = colorLila;
+                    dgvCliente.ColumnHeadersDefaultCellStyle.ForeColor = colorTexto;
+
+                    foreach (DataGridViewColumn col in dgvCliente.Columns)
+                    {
+                        col.HeaderCell.Style.BackColor = colorLila;
+                        col.HeaderCell.Style.ForeColor = colorTexto;
+                    }
+
+                    dgvCliente.TopLeftHeaderCell.Style.BackColor = colorLila;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar clientes: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    ex.GetBaseException().Message,
+                    "Error de conexión",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
@@ -140,6 +162,8 @@ namespace Libreria_PAE
             txtApellido.ReadOnly = esConsumidorGeneral;
             txtTelefono.ReadOnly = esConsumidorGeneral;
 
+            btnEliminar.Enabled = !esConsumidorGeneral;
+            btnAgregar.Enabled = !esConsumidorGeneral;
         }
 
         private void LimpiarControles()
@@ -147,6 +171,11 @@ namespace Libreria_PAE
             txtNombre.Clear();
             txtApellido.Clear();
             txtTelefono.Clear();
+            txtNombre.ReadOnly = false;
+            txtApellido.ReadOnly = false;
+            txtTelefono.ReadOnly = false;
+            btnEliminar.Enabled = true;
+            btnAgregar.Enabled = true;
             if (label23 != null) label23.Text = "---";
             if (label24 != null) label24.Text = "---";
             idClienteSeleccionado = 0;
@@ -157,6 +186,14 @@ namespace Libreria_PAE
         {
             try
             {
+                if (txtNombre.Text.Trim().Equals("Consumidor", StringComparison.OrdinalIgnoreCase) &&
+                    txtApellido.Text.Trim().Equals("General", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("El cliente 'Consumidor General' es un registro base del sistema y no puede ser modificado ni sobreescrito.",
+                                    "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 Cliente cliente = ObtenerCliente();
 
                 if (idClienteSeleccionado == 0)
@@ -187,6 +224,14 @@ namespace Libreria_PAE
                 return;
             }
 
+            if (txtNombre.Text.Trim().Equals("Consumidor", StringComparison.OrdinalIgnoreCase) &&
+                txtApellido.Text.Trim().Equals("General", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("El cliente 'Consumidor General' es un registro del sistema y no puede ser dado de baja.",
+                                "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Desea dar de baja a este cliente?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -211,12 +256,6 @@ namespace Libreria_PAE
             EjecutarGuardarOAgregar();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            EjecutarGuardarOAgregar();
-        }
-
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EjecutarDarDeBaja();
@@ -229,7 +268,10 @@ namespace Libreria_PAE
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            CargarClientes();
+            if (string.IsNullOrWhiteSpace(txtFiltrar.Text))
+            {
+                CargarClientes();
+            }
         }
 
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -272,19 +314,6 @@ namespace Libreria_PAE
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (idClienteSeleccionado == 0)
-            {
-                MessageBox.Show("Seleccione un cliente de la tabla para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                txtNombre.Focus();
-                MessageBox.Show("Modifique los campos necesarios y presione Guardar.", "Modo Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             Close();
@@ -301,7 +330,6 @@ namespace Libreria_PAE
                     Cliente clienteUnico = negocio.Buscar(idClienteSeleccionado);
                     if (clienteUnico != null)
                     {
-                        
                         listaClientes.Add(clienteUnico);
                     }
                 }
@@ -335,14 +363,24 @@ namespace Libreria_PAE
             CargarClientes();
         }
 
-        private void rdNombre_CheckedChanged(object sender, EventArgs e)
+        private void cmbNombre_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (rbNombre.Checked) CargarClientes();
+            CargarClientes();
         }
 
-        private void rdApellido_CheckedChanged(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (rbApellido.Checked) CargarClientes();
+            if (string.IsNullOrWhiteSpace(txtFiltrar.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un término en el buscador para realizar la consulta.",
+                                "Búsqueda vacía", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtFiltrar.Focus();
+                return;
+            }
+
+            CargarClientes();
         }
+
+     
     }
 }

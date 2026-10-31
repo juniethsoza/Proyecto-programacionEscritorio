@@ -1,9 +1,5 @@
-CREATE DATABASE BDSIGIV;
+USE [db_acfdc6_bdsigiv];
 GO
-
-USE BDSIGIV;
-GO 
-
 CREATE TABLE Rol
 (
     IdRol INT PRIMARY KEY IDENTITY (1,1),
@@ -83,9 +79,6 @@ CREATE TABLE Cliente
 );
 GO
 
-CREATE UNIQUE NONCLUSTERED INDEX UQ_Cliente_Telefono
-ON Cliente(Telefono) WHERE Telefono IS NOT NULL;
-GO
 
 CREATE TABLE Factura
 (
@@ -227,8 +220,16 @@ VALUES
     ('Movimientos_Ver'), ('Movimientos_Ajustar');
 GO
 
-INSERT INTO Cliente (Nombre, Apellido, Telefono) 
-VALUES('Consumidor', 'General', NULL);
+IF NOT EXISTS (
+    SELECT 1
+    FROM dbo.Cliente
+    WHERE Nombre = N'Consumidor'
+      AND Apellido = N'General'
+)
+BEGIN
+    INSERT INTO dbo.Cliente (Nombre, Apellido, Telefono)
+    VALUES (N'Consumidor', N'General', NULL);
+END;
 GO
 
 INSERT INTO RolPermiso(RolID, PermisoID)
@@ -657,5 +658,127 @@ ELSE
       SELECT NULL AS IdUsuario;
     END
 END;
+Go
+
+CREATE OR ALTER PROCEDURE dbo.sp_Categoria_Listar
+    @Filtro NVARCHAR(4000) = NULL,
+    @OrdenarPor NVARCHAR(30) = N'Nombre',
+    @Descendente BIT = 0
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET @Filtro = NULLIF(LTRIM(RTRIM(@Filtro)), N'');
+    SET @OrdenarPor = COALESCE(@OrdenarPor, N'Nombre');
+    SET @Descendente = COALESCE(@Descendente, 0);
+
+    IF @OrdenarPor NOT IN (N'Nombre', N'Descripcion', N'CreatedAt')
+        THROW 50001, N'El campo de ordenación no es válido.', 1;
+
+    SELECT IdCategoria, Nombre, Descripcion, CreatedAt
+    FROM dbo.Categoria
+    WHERE @Filtro IS NULL
+       OR CHARINDEX(@Filtro, Nombre) > 0
+       OR CHARINDEX(@Filtro, COALESCE(Descripcion, N'')) > 0
+    ORDER BY
+        CASE WHEN @OrdenarPor = N'Nombre' AND @Descendente = 0 THEN Nombre END ASC,
+        CASE WHEN @OrdenarPor = N'Nombre' AND @Descendente = 1 THEN Nombre END DESC,
+        CASE WHEN @OrdenarPor = N'Descripcion' AND @Descendente = 0 THEN Descripcion END ASC,
+        CASE WHEN @OrdenarPor = N'Descripcion' AND @Descendente = 1 THEN Descripcion END DESC,
+        CASE WHEN @OrdenarPor = N'CreatedAt' AND @Descendente = 0 THEN CreatedAt END ASC,
+        CASE WHEN @OrdenarPor = N'CreatedAt' AND @Descendente = 1 THEN CreatedAt END DESC,
+        IdCategoria ASC;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.sp_Categoria_Buscar
+    @IdCategoria INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT IdCategoria, Nombre, Descripcion, CreatedAt
+    FROM dbo.Categoria
+    WHERE IdCategoria = @IdCategoria;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.sp_Categoria_Insertar
+    @Nombre NVARCHAR(MAX),
+    @Descripcion NVARCHAR(MAX) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET @Nombre = NULLIF(LTRIM(RTRIM(@Nombre)), N'');
+    SET @Descripcion = NULLIF(LTRIM(RTRIM(@Descripcion)), N'');
+
+    IF @Nombre IS NULL
+        THROW 50002, N'Ingrese el nombre de la categoría.', 1;
+    IF DATALENGTH(@Nombre) > 200
+        THROW 50003, N'El nombre excede la capacidad de 100 caracteres.', 1;
+    IF DATALENGTH(@Descripcion) > 510
+        THROW 50004, N'La descripción excede la capacidad de 255 caracteres.', 1;
+
+    INSERT INTO dbo.Categoria (Nombre, Descripcion)
+    VALUES (@Nombre, @Descripcion);
+
+    SELECT CAST(SCOPE_IDENTITY() AS INT) AS IdCategoria;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.sp_Categoria_Actualizar
+    @IdCategoria INT,
+    @Nombre NVARCHAR(MAX),
+    @Descripcion NVARCHAR(MAX) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET @Nombre = NULLIF(LTRIM(RTRIM(@Nombre)), N'');
+    SET @Descripcion = NULLIF(LTRIM(RTRIM(@Descripcion)), N'');
+
+    IF @Nombre IS NULL
+        THROW 50002, N'Ingrese el nombre de la categoría.', 1;
+    IF DATALENGTH(@Nombre) > 200
+        THROW 50003, N'El nombre excede la capacidad de 100 caracteres.', 1;
+    IF DATALENGTH(@Descripcion) > 510
+        THROW 50004, N'La descripción excede la capacidad de 255 caracteres.', 1;
+
+    UPDATE dbo.Categoria
+    SET Nombre = @Nombre, Descripcion = @Descripcion
+    WHERE IdCategoria = @IdCategoria;
+
+    IF @@ROWCOUNT = 0
+        THROW 50005, N'La categoría ya no existe. Actualice el listado.', 1;
+
+    SELECT CAST(1 AS BIT) AS Actualizado;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.sp_Categoria_Eliminar
+    @IdCategoria INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        DELETE FROM dbo.Categoria WHERE IdCategoria = @IdCategoria;
+
+        IF @@ROWCOUNT = 0
+            THROW 50005, N'La categoría ya no existe. Actualice el listado.', 1;
+
+        SELECT CAST(1 AS BIT) AS Eliminado;
+    END TRY
+    BEGIN CATCH
+        IF ERROR_NUMBER() = 547
+            THROW 50006, N'No se puede eliminar la categoría porque tiene registros relacionados. Reasigne o elimine primero sus subcategorías.', 1;
+        THROW;
+    END CATCH;
+END;
+GO
+
+SELECT DB_NAME() AS BaseActual;
+
+SELECT SCHEMA_NAME(schema_id) AS Esquema, name AS Procedimiento
+FROM sys.procedures
+WHERE name LIKE N'sp_Categoria[_]%'
+ORDER BY name;
 
 GO
