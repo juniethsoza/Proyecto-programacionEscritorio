@@ -19,7 +19,6 @@
         <EntityTypeShape EntityType="BDSIGIVModel.Rol" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BDSIGIVModel.RolPermiso" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BDSIGIVModel.SubCategoria" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDSIGIVModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BDSIGIVModel.Usuario" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BDSIGIVModel.vw_ComprasResumen" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BDSIGIVModel.vw_MovimientosInventario" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ClienteEntidad = Entidades.Cliente;
 
-namespace CapaDato
+namespace CapaDatos
 {
     public class ClienteDatos
     {

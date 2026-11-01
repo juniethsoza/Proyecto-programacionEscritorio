@@ -13,10 +13,12 @@ namespace Libreria_PAE
         private int idClienteSeleccionado = 0;
         private readonly ClienteNegocio negocio = new ClienteNegocio();
 
+        private int idCategoriaSeleccionado = 0;
+        private readonly CategoriaNegocio negocioCategoria = new CategoriaNegocio();
+
         public frmCatalogos()
         {
             InitializeComponent();
-     
         }
 
         private void frmCatalogos_Load(object sender, EventArgs e)
@@ -37,9 +39,27 @@ namespace Libreria_PAE
                 cmbNombre.SelectedIndex = 0;
             }
 
+            if (cmbOrdCat.Items.Count == 0)
+            {
+                cmbOrdCat.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbOrdCat.Items.Add("A-Z");
+                cmbOrdCat.Items.Add("Z-A");
+                cmbOrdCat.SelectedIndex = 0;
+            }
+
+            if (cmbNomCt.Items.Count == 0)
+            {
+                cmbNomCt.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbNomCt.Items.Add("Nombre");
+                cmbNomCt.Items.Add("Descripción");
+                cmbNomCt.SelectedIndex = 0;
+            }
+
             dgvCliente.ColumnHeadersVisible = true;
+            dgvCategoria.ColumnHeadersVisible = true;
 
             CargarClientes();
+            CargarCategorias();
         }
 
         private void CargarClientes()
@@ -122,11 +142,7 @@ namespace Libreria_PAE
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    ex.GetBaseException().Message,
-                    "Error de conexión",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar clientes: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -381,6 +397,245 @@ namespace Libreria_PAE
             CargarClientes();
         }
 
-     
+        private void CargarCategorias()
+        {
+            try
+            {
+                string filtro = txtBuscarCt != null ? txtBuscarCt.Text.Trim() : null;
+                string seleccionCampo = (cmbNomCt != null && cmbNomCt.SelectedItem != null)
+                    ? cmbNomCt.SelectedItem.ToString()
+                    : "Nombre";
+
+                string ordenarPor = (seleccionCampo == "Descripción" || seleccionCampo == "Descripcion")
+                    ? "Descripcion"
+                    : "Nombre";
+
+                bool esDescendente = (cmbOrdCat != null && cmbOrdCat.SelectedItem?.ToString() == "Z-A");
+
+                List<Categoria> lista = negocioCategoria.Listar(filtro, ordenarPor, esDescendente);
+
+                if (lista == null) lista = new List<Categoria>();
+
+                dgvCategoria.DataSource = null;
+                dgvCategoria.DataSource = lista;
+
+                if (dgvCategoria.Columns.Count > 0)
+                {
+                    if (dgvCategoria.Columns["IdCategoria"] != null)
+                        dgvCategoria.Columns["IdCategoria"].Visible = false;
+
+                    if (dgvCategoria.Columns["Estado"] != null)
+                        dgvCategoria.Columns["Estado"].Visible = false;
+
+                    if (dgvCategoria.Columns["CreatedAt"] != null)
+                        dgvCategoria.Columns["CreatedAt"].Visible = false;
+
+                    if (dgvCategoria.Columns["Nombre"] != null)
+                        dgvCategoria.Columns["Nombre"].HeaderText = "Nombre";
+
+                    if (dgvCategoria.Columns["Descripcion"] != null)
+                        dgvCategoria.Columns["Descripcion"].HeaderText = "Descripción";
+
+                    dgvCategoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    dgvCategoria.EnableHeadersVisualStyles = false;
+                    Color colorLila = Color.FromArgb(225, 213, 248);
+                    Color colorTexto = Color.FromArgb(30, 30, 30);
+
+                    dgvCategoria.ColumnHeadersDefaultCellStyle.BackColor = colorLila;
+                    dgvCategoria.ColumnHeadersDefaultCellStyle.ForeColor = colorTexto;
+
+                    foreach (DataGridViewColumn col in dgvCategoria.Columns)
+                    {
+                        col.HeaderCell.Style.BackColor = colorLila;
+                        col.HeaderCell.Style.ForeColor = colorTexto;
+                    }
+
+                    dgvCategoria.TopLeftHeaderCell.Style.BackColor = colorLila;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar categorías: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private Categoria ObtenerCategoria()
+        {
+            return new Categoria
+            {
+                IdCategoria = idCategoriaSeleccionado,
+                Nombre = txtNombreCategoria.Text.Trim(),
+                Descripcion = txtDescripcionCt.Text.Trim()
+            };
+        }
+
+        private void MostrarCategoria(Categoria categoria)
+        {
+            if (categoria == null) return;
+
+            idCategoriaSeleccionado = categoria.IdCategoria;
+            txtNombreCategoria.Text = categoria.Nombre;
+            txtDescripcionCt.Text = categoria.Descripcion ?? string.Empty;
+
+            if (lbFecha != null)
+                lbFecha.Text = categoria.CreatedAt?.ToString("dd/MM/yyyy") ?? string.Empty;
+        }
+
+        private void LimpiarControlesCategoria()
+        {
+            txtNombreCategoria.Clear();
+            txtDescripcionCt.Clear();
+            if (lbFecha != null) lbFecha.Text = "---";
+            idCategoriaSeleccionado = 0;
+            txtNombreCategoria.Focus();
+        }
+
+        private void EjecutarGuardarOAgregarCategoria()
+        {
+            try
+            {
+                Categoria categoria = ObtenerCategoria();
+
+                if (idCategoriaSeleccionado == 0)
+                {
+                    negocioCategoria.Insertar(categoria);
+                    MessageBox.Show("La categoría fue registrada correctamente.", "Registro completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    negocioCategoria.Actualizar(categoria);
+                    MessageBox.Show("Los datos de la categoría fueron actualizados correctamente.", "Actualización completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                CargarCategorias();
+                LimpiarControlesCategoria();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "No fue posible guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EjecutarDarDeBajaCategoria()
+        {
+            if (idCategoriaSeleccionado == 0)
+            {
+                MessageBox.Show("Seleccione una categoría de la lista para dar de baja.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Desea dar de baja a esta categoría?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (respuesta != DialogResult.Yes) return;
+
+                negocioCategoria.Eliminar(idCategoriaSeleccionado);
+                MessageBox.Show("Categoría dada de baja correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarCategorias();
+                LimpiarControlesCategoria();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "No fue posible eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnNuevoCt_Click(object sender, EventArgs e)
+        {
+            LimpiarControlesCategoria();
+        }
+
+        private void btnbuscarCat_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarCt.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un término en el buscador para realizar la consulta.",
+                                "Búsqueda vacía", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBuscarCt.Focus();
+                return;
+            }
+
+            CargarCategorias();
+        }
+
+        private void txtBuscarCt_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarCt.Text))
+            {
+                CargarCategorias();
+            }
+        }
+
+        private void dgvCategoria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            Categoria categoria = dgvCategoria.Rows[e.RowIndex].DataBoundItem as Categoria;
+            if (categoria != null)
+            {
+                MostrarCategoria(categoria);
+            }
+        }
+
+        private void dgvCategoria_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            string numeroFila = (e.RowIndex + 1).ToString();
+
+            StringFormat formato = new StringFormat()
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            };
+
+            Rectangle limitesEncabezado = new Rectangle(
+                e.RowBounds.Left,
+                e.RowBounds.Top,
+                dgvCategoria.RowHeadersWidth,
+                e.RowBounds.Height
+            );
+
+            using (SolidBrush pincel = new SolidBrush(dgvCategoria.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString(
+                    numeroFila,
+                    dgvCategoria.RowHeadersDefaultCellStyle.Font ?? this.Font,
+                    pincel,
+                    limitesEncabezado,
+                    formato
+                );
+            }
+        }
+
+        private void btnAgregarCt_Click(object sender, EventArgs e)
+        {
+            EjecutarGuardarOAgregarCategoria();
+        }
+
+        private void btnEliminarCt_Click(object sender, EventArgs e)
+        {
+            EjecutarDarDeBajaCategoria();
+        }
+
+        private void btnCerrarCt_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmbOrdCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarCategorias();
+        }
+
+        private void cmbNomCt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarCategorias();
+        }
+
+        private void btnImprimirCt_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El reporte de categorías estará disponible próximamente.",
+                            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

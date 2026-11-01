@@ -41,7 +41,6 @@ namespace CapaDatos
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<RolPermiso> RolPermiso { get; set; }
         public virtual DbSet<SubCategoria> SubCategoria { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<vw_ComprasResumen> vw_ComprasResumen { get; set; }
         public virtual DbSet<vw_MovimientosInventario> vw_MovimientosInventario { get; set; }
@@ -272,6 +271,71 @@ namespace CapaDatos
                 new ObjectParameter("Password", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ValidarLogin_Result>("sp_ValidarLogin", usernameParameter, passwordParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Categoria_Actualizar(Nullable<int> idCategoria, string nombre, string descripcion)
+        {
+            var idCategoriaParameter = idCategoria.HasValue ?
+                new ObjectParameter("IdCategoria", idCategoria) :
+                new ObjectParameter("IdCategoria", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Categoria_Actualizar", idCategoriaParameter, nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_Categoria_Buscar_Result> sp_Categoria_Buscar(Nullable<int> idCategoria)
+        {
+            var idCategoriaParameter = idCategoria.HasValue ?
+                new ObjectParameter("IdCategoria", idCategoria) :
+                new ObjectParameter("IdCategoria", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Categoria_Buscar_Result>("sp_Categoria_Buscar", idCategoriaParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Categoria_Eliminar(Nullable<int> idCategoria)
+        {
+            var idCategoriaParameter = idCategoria.HasValue ?
+                new ObjectParameter("IdCategoria", idCategoria) :
+                new ObjectParameter("IdCategoria", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Categoria_Eliminar", idCategoriaParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_Categoria_Insertar(string nombre, string descripcion)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_Categoria_Insertar", nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_Categoria_Listar_Result> sp_Categoria_Listar(string filtro, string ordenarPor, Nullable<bool> descendente)
+        {
+            var filtroParameter = filtro != null ?
+                new ObjectParameter("Filtro", filtro) :
+                new ObjectParameter("Filtro", typeof(string));
+    
+            var ordenarPorParameter = ordenarPor != null ?
+                new ObjectParameter("OrdenarPor", ordenarPor) :
+                new ObjectParameter("OrdenarPor", typeof(string));
+    
+            var descendenteParameter = descendente.HasValue ?
+                new ObjectParameter("Descendente", descendente) :
+                new ObjectParameter("Descendente", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Categoria_Listar_Result>("sp_Categoria_Listar", filtroParameter, ordenarPorParameter, descendenteParameter);
         }
     }
 }

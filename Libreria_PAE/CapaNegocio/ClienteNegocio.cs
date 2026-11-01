@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using CapaDato;
+using CapaDatos;
 using ClienteEntidad = Entidades.Cliente;
 
 namespace CapaNegocio

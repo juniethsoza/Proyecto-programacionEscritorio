@@ -1287,6 +1287,7 @@
             this.btnAgregarCt.Text = "Agregar";
             this.btnAgregarCt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarCt.UseVisualStyleBackColor = false;
+            this.btnAgregarCt.Click += new System.EventHandler(this.btnAgregarCt_Click);
             // 
             // label29
             // 
@@ -1386,6 +1387,7 @@
             this.cmbNomCt.Name = "cmbNomCt";
             this.cmbNomCt.Size = new System.Drawing.Size(165, 34);
             this.cmbNomCt.TabIndex = 13;
+            this.cmbNomCt.SelectedIndexChanged += new System.EventHandler(this.cmbNomCt_SelectedIndexChanged);
             // 
             // cmbOrdCat
             // 
@@ -1394,6 +1396,7 @@
             this.cmbOrdCat.Name = "cmbOrdCat";
             this.cmbOrdCat.Size = new System.Drawing.Size(161, 34);
             this.cmbOrdCat.TabIndex = 12;
+            this.cmbOrdCat.SelectedIndexChanged += new System.EventHandler(this.cmbOrdCat_SelectedIndexChanged);
             // 
             // label26
             // 
@@ -1448,6 +1451,7 @@
             this.btnImprimirCt.Text = "Imprimir";
             this.btnImprimirCt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImprimirCt.UseVisualStyleBackColor = false;
+            this.btnImprimirCt.Click += new System.EventHandler(this.btnImprimirCt_Click);
             // 
             // btnEliminarCt
             // 
@@ -1463,6 +1467,7 @@
             this.btnEliminarCt.Text = "Eliminar";
             this.btnEliminarCt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarCt.UseVisualStyleBackColor = false;
+            this.btnEliminarCt.Click += new System.EventHandler(this.btnEliminarCt_Click);
             // 
             // dgvCategoria
             // 
@@ -1503,6 +1508,7 @@
             this.btnCerrarCt.Text = "Cerrar";
             this.btnCerrarCt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarCt.UseVisualStyleBackColor = false;
+            this.btnCerrarCt.Click += new System.EventHandler(this.btnCerrarCt_Click);
             // 
             // tbcCatalogo
             // 
