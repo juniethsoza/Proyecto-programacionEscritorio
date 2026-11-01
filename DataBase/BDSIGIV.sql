@@ -1,5 +1,6 @@
 USE [db_acfdc6_bdsigiv];
 GO
+
 CREATE TABLE Rol
 (
     IdRol INT PRIMARY KEY IDENTITY (1,1),
@@ -772,13 +773,4 @@ BEGIN
         THROW;
     END CATCH;
 END;
-GO
-
-SELECT DB_NAME() AS BaseActual;
-
-SELECT SCHEMA_NAME(schema_id) AS Esquema, name AS Procedimiento
-FROM sys.procedures
-WHERE name LIKE N'sp_Categoria[_]%'
-ORDER BY name;
-
 GO
