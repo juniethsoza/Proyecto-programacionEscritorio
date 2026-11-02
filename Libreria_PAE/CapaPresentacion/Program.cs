@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion;
 
 namespace Libreria_PAE
 {
@@ -16,7 +17,7 @@ namespace Libreria_PAE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCatalogos());
+            Application.Run(new frmCentroAyuda());
         }
     }
 }
