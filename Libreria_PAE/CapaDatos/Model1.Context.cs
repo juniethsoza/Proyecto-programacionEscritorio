@@ -337,5 +337,370 @@ namespace CapaDatos
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Categoria_Listar_Result>("sp_Categoria_Listar", filtroParameter, ordenarPorParameter, descendenteParameter);
         }
+    
+        public virtual ObjectResult<string> sp_Permiso_ListarPorRol(Nullable<int> rolID)
+        {
+            var rolIDParameter = rolID.HasValue ?
+                new ObjectParameter("RolID", rolID) :
+                new ObjectParameter("RolID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("sp_Permiso_ListarPorRol", rolIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_Rol_Listar_Result> sp_Rol_Listar()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Rol_Listar_Result>("sp_Rol_Listar");
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_SubCategoria_Actualizar(Nullable<int> idSubcategoria, Nullable<int> categoriaID, string nombre, string descripcion)
+        {
+            var idSubcategoriaParameter = idSubcategoria.HasValue ?
+                new ObjectParameter("IdSubcategoria", idSubcategoria) :
+                new ObjectParameter("IdSubcategoria", typeof(int));
+    
+            var categoriaIDParameter = categoriaID.HasValue ?
+                new ObjectParameter("CategoriaID", categoriaID) :
+                new ObjectParameter("CategoriaID", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_SubCategoria_Actualizar", idSubcategoriaParameter, categoriaIDParameter, nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_SubCategoria_Buscar_Result> sp_SubCategoria_Buscar(Nullable<int> idSubcategoria)
+        {
+            var idSubcategoriaParameter = idSubcategoria.HasValue ?
+                new ObjectParameter("IdSubcategoria", idSubcategoria) :
+                new ObjectParameter("IdSubcategoria", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SubCategoria_Buscar_Result>("sp_SubCategoria_Buscar", idSubcategoriaParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_SubCategoria_Eliminar(Nullable<int> idSubcategoria)
+        {
+            var idSubcategoriaParameter = idSubcategoria.HasValue ?
+                new ObjectParameter("IdSubcategoria", idSubcategoria) :
+                new ObjectParameter("IdSubcategoria", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_SubCategoria_Eliminar", idSubcategoriaParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_SubCategoria_Insertar(Nullable<int> categoriaID, string nombre, string descripcion)
+        {
+            var categoriaIDParameter = categoriaID.HasValue ?
+                new ObjectParameter("CategoriaID", categoriaID) :
+                new ObjectParameter("CategoriaID", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_SubCategoria_Insertar", categoriaIDParameter, nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_SubCategoria_Listar_Result> sp_SubCategoria_Listar(string filtro, string ordenarPor, Nullable<bool> descendente)
+        {
+            var filtroParameter = filtro != null ?
+                new ObjectParameter("Filtro", filtro) :
+                new ObjectParameter("Filtro", typeof(string));
+    
+            var ordenarPorParameter = ordenarPor != null ?
+                new ObjectParameter("OrdenarPor", ordenarPor) :
+                new ObjectParameter("OrdenarPor", typeof(string));
+    
+            var descendenteParameter = descendente.HasValue ?
+                new ObjectParameter("Descendente", descendente) :
+                new ObjectParameter("Descendente", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SubCategoria_Listar_Result>("sp_SubCategoria_Listar", filtroParameter, ordenarPorParameter, descendenteParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Usuario_Actualizar(Nullable<int> idUsuario, Nullable<int> rolID, string nombre, string apellido, string username, string clave, string email, string telefono, Nullable<bool> estado)
+        {
+            var idUsuarioParameter = idUsuario.HasValue ?
+                new ObjectParameter("IdUsuario", idUsuario) :
+                new ObjectParameter("IdUsuario", typeof(int));
+    
+            var rolIDParameter = rolID.HasValue ?
+                new ObjectParameter("RolID", rolID) :
+                new ObjectParameter("RolID", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var apellidoParameter = apellido != null ?
+                new ObjectParameter("Apellido", apellido) :
+                new ObjectParameter("Apellido", typeof(string));
+    
+            var usernameParameter = username != null ?
+                new ObjectParameter("Username", username) :
+                new ObjectParameter("Username", typeof(string));
+    
+            var claveParameter = clave != null ?
+                new ObjectParameter("Clave", clave) :
+                new ObjectParameter("Clave", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("Telefono", telefono) :
+                new ObjectParameter("Telefono", typeof(string));
+    
+            var estadoParameter = estado.HasValue ?
+                new ObjectParameter("Estado", estado) :
+                new ObjectParameter("Estado", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Usuario_Actualizar", idUsuarioParameter, rolIDParameter, nombreParameter, apellidoParameter, usernameParameter, claveParameter, emailParameter, telefonoParameter, estadoParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Usuario_CambiarEstado(Nullable<int> idUsuario)
+        {
+            var idUsuarioParameter = idUsuario.HasValue ?
+                new ObjectParameter("IdUsuario", idUsuario) :
+                new ObjectParameter("IdUsuario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Usuario_CambiarEstado", idUsuarioParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_Usuario_Insertar(Nullable<int> rolID, string nombre, string apellido, string username, string clave, string email, string telefono, Nullable<bool> estado)
+        {
+            var rolIDParameter = rolID.HasValue ?
+                new ObjectParameter("RolID", rolID) :
+                new ObjectParameter("RolID", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var apellidoParameter = apellido != null ?
+                new ObjectParameter("Apellido", apellido) :
+                new ObjectParameter("Apellido", typeof(string));
+    
+            var usernameParameter = username != null ?
+                new ObjectParameter("Username", username) :
+                new ObjectParameter("Username", typeof(string));
+    
+            var claveParameter = clave != null ?
+                new ObjectParameter("Clave", clave) :
+                new ObjectParameter("Clave", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("Telefono", telefono) :
+                new ObjectParameter("Telefono", typeof(string));
+    
+            var estadoParameter = estado.HasValue ?
+                new ObjectParameter("Estado", estado) :
+                new ObjectParameter("Estado", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_Usuario_Insertar", rolIDParameter, nombreParameter, apellidoParameter, usernameParameter, claveParameter, emailParameter, telefonoParameter, estadoParameter);
+        }
+    
+        public virtual ObjectResult<sp_Usuario_Listar_Result> sp_Usuario_Listar(string filtro, Nullable<int> rolID)
+        {
+            var filtroParameter = filtro != null ?
+                new ObjectParameter("Filtro", filtro) :
+                new ObjectParameter("Filtro", typeof(string));
+    
+            var rolIDParameter = rolID.HasValue ?
+                new ObjectParameter("RolID", rolID) :
+                new ObjectParameter("RolID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Usuario_Listar_Result>("sp_Usuario_Listar", filtroParameter, rolIDParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Proveedor_Actualizar(Nullable<int> idProveedor, string nombre, string telefono)
+        {
+            var idProveedorParameter = idProveedor.HasValue ?
+                new ObjectParameter("IdProveedor", idProveedor) :
+                new ObjectParameter("IdProveedor", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("Telefono", telefono) :
+                new ObjectParameter("Telefono", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Proveedor_Actualizar", idProveedorParameter, nombreParameter, telefonoParameter);
+        }
+    
+        public virtual ObjectResult<sp_Proveedor_Buscar_Result> sp_Proveedor_Buscar(Nullable<int> idProveedor)
+        {
+            var idProveedorParameter = idProveedor.HasValue ?
+                new ObjectParameter("IdProveedor", idProveedor) :
+                new ObjectParameter("IdProveedor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Proveedor_Buscar_Result>("sp_Proveedor_Buscar", idProveedorParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Proveedor_Eliminar(Nullable<int> idProveedor)
+        {
+            var idProveedorParameter = idProveedor.HasValue ?
+                new ObjectParameter("IdProveedor", idProveedor) :
+                new ObjectParameter("IdProveedor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Proveedor_Eliminar", idProveedorParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_Proveedor_Insertar(string nombre, string telefono)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("Telefono", telefono) :
+                new ObjectParameter("Telefono", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_Proveedor_Insertar", nombreParameter, telefonoParameter);
+        }
+    
+        public virtual ObjectResult<sp_Proveedor_Listar_Result> sp_Proveedor_Listar(string filtro, string ordenarPor, Nullable<bool> descendente)
+        {
+            var filtroParameter = filtro != null ?
+                new ObjectParameter("Filtro", filtro) :
+                new ObjectParameter("Filtro", typeof(string));
+    
+            var ordenarPorParameter = ordenarPor != null ?
+                new ObjectParameter("OrdenarPor", ordenarPor) :
+                new ObjectParameter("OrdenarPor", typeof(string));
+    
+            var descendenteParameter = descendente.HasValue ?
+                new ObjectParameter("Descendente", descendente) :
+                new ObjectParameter("Descendente", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Proveedor_Listar_Result>("sp_Proveedor_Listar", filtroParameter, ordenarPorParameter, descendenteParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Producto_Actualizar(Nullable<int> idProducto, Nullable<int> categoriaID, Nullable<int> subCategoriaID, string codigo, string nombre, string descripcion, Nullable<decimal> precioCompra, Nullable<decimal> precioVenta, Nullable<int> stockMinimo)
+        {
+            var idProductoParameter = idProducto.HasValue ?
+                new ObjectParameter("IdProducto", idProducto) :
+                new ObjectParameter("IdProducto", typeof(int));
+    
+            var categoriaIDParameter = categoriaID.HasValue ?
+                new ObjectParameter("CategoriaID", categoriaID) :
+                new ObjectParameter("CategoriaID", typeof(int));
+    
+            var subCategoriaIDParameter = subCategoriaID.HasValue ?
+                new ObjectParameter("SubCategoriaID", subCategoriaID) :
+                new ObjectParameter("SubCategoriaID", typeof(int));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("Codigo", codigo) :
+                new ObjectParameter("Codigo", typeof(string));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            var precioCompraParameter = precioCompra.HasValue ?
+                new ObjectParameter("PrecioCompra", precioCompra) :
+                new ObjectParameter("PrecioCompra", typeof(decimal));
+    
+            var precioVentaParameter = precioVenta.HasValue ?
+                new ObjectParameter("PrecioVenta", precioVenta) :
+                new ObjectParameter("PrecioVenta", typeof(decimal));
+    
+            var stockMinimoParameter = stockMinimo.HasValue ?
+                new ObjectParameter("StockMinimo", stockMinimo) :
+                new ObjectParameter("StockMinimo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Producto_Actualizar", idProductoParameter, categoriaIDParameter, subCategoriaIDParameter, codigoParameter, nombreParameter, descripcionParameter, precioCompraParameter, precioVentaParameter, stockMinimoParameter);
+        }
+    
+        public virtual ObjectResult<sp_Producto_Buscar_Result> sp_Producto_Buscar(Nullable<int> idProducto)
+        {
+            var idProductoParameter = idProducto.HasValue ?
+                new ObjectParameter("IdProducto", idProducto) :
+                new ObjectParameter("IdProducto", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Producto_Buscar_Result>("sp_Producto_Buscar", idProductoParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_Producto_Eliminar(Nullable<int> idProducto)
+        {
+            var idProductoParameter = idProducto.HasValue ?
+                new ObjectParameter("IdProducto", idProducto) :
+                new ObjectParameter("IdProducto", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Producto_Eliminar", idProductoParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_Producto_Insertar(Nullable<int> categoriaID, Nullable<int> subCategoriaID, string codigo, string nombre, string descripcion, Nullable<decimal> precioCompra, Nullable<decimal> precioVenta, Nullable<int> stockMinimo)
+        {
+            var categoriaIDParameter = categoriaID.HasValue ?
+                new ObjectParameter("CategoriaID", categoriaID) :
+                new ObjectParameter("CategoriaID", typeof(int));
+    
+            var subCategoriaIDParameter = subCategoriaID.HasValue ?
+                new ObjectParameter("SubCategoriaID", subCategoriaID) :
+                new ObjectParameter("SubCategoriaID", typeof(int));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("Codigo", codigo) :
+                new ObjectParameter("Codigo", typeof(string));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            var precioCompraParameter = precioCompra.HasValue ?
+                new ObjectParameter("PrecioCompra", precioCompra) :
+                new ObjectParameter("PrecioCompra", typeof(decimal));
+    
+            var precioVentaParameter = precioVenta.HasValue ?
+                new ObjectParameter("PrecioVenta", precioVenta) :
+                new ObjectParameter("PrecioVenta", typeof(decimal));
+    
+            var stockMinimoParameter = stockMinimo.HasValue ?
+                new ObjectParameter("StockMinimo", stockMinimo) :
+                new ObjectParameter("StockMinimo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_Producto_Insertar", categoriaIDParameter, subCategoriaIDParameter, codigoParameter, nombreParameter, descripcionParameter, precioCompraParameter, precioVentaParameter, stockMinimoParameter);
+        }
+    
+        public virtual ObjectResult<sp_Producto_Listar_Result> sp_Producto_Listar(string filtro, string ordenarPor, Nullable<bool> descendente)
+        {
+            var filtroParameter = filtro != null ?
+                new ObjectParameter("Filtro", filtro) :
+                new ObjectParameter("Filtro", typeof(string));
+    
+            var ordenarPorParameter = ordenarPor != null ?
+                new ObjectParameter("OrdenarPor", ordenarPor) :
+                new ObjectParameter("OrdenarPor", typeof(string));
+    
+            var descendenteParameter = descendente.HasValue ?
+                new ObjectParameter("Descendente", descendente) :
+                new ObjectParameter("Descendente", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Producto_Listar_Result>("sp_Producto_Listar", filtroParameter, ordenarPorParameter, descendenteParameter);
+        }
     }
 }

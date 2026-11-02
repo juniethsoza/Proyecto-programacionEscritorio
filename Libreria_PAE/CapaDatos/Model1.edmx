@@ -561,6 +561,112 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' does not h
           <Parameter Name="OrdenarPor" Type="nvarchar" Mode="In" />
           <Parameter Name="Descendente" Type="bit" Mode="In" />
         </Function>
+        <Function Name="sp_Permiso_ListarPorRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RolID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Producto_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+          <Parameter Name="CategoriaID" Type="int" Mode="In" />
+          <Parameter Name="SubCategoriaID" Type="int" Mode="In" />
+          <Parameter Name="Codigo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+          <Parameter Name="PrecioCompra" Type="decimal" Mode="In" />
+          <Parameter Name="PrecioVenta" Type="decimal" Mode="In" />
+          <Parameter Name="StockMinimo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Producto_Buscar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Producto_Eliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Producto_Insertar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoriaID" Type="int" Mode="In" />
+          <Parameter Name="SubCategoriaID" Type="int" Mode="In" />
+          <Parameter Name="Codigo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+          <Parameter Name="PrecioCompra" Type="decimal" Mode="In" />
+          <Parameter Name="PrecioVenta" Type="decimal" Mode="In" />
+          <Parameter Name="StockMinimo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Producto_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Filtro" Type="nvarchar" Mode="In" />
+          <Parameter Name="OrdenarPor" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descendente" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Proveedor_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProveedor" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Proveedor_Buscar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProveedor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Proveedor_Eliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProveedor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Proveedor_Insertar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Proveedor_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Filtro" Type="nvarchar" Mode="In" />
+          <Parameter Name="OrdenarPor" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descendente" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Rol_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_SubCategoria_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSubcategoria" Type="int" Mode="In" />
+          <Parameter Name="CategoriaID" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SubCategoria_Buscar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSubcategoria" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_SubCategoria_Eliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSubcategoria" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_SubCategoria_Insertar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoriaID" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SubCategoria_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Filtro" Type="nvarchar" Mode="In" />
+          <Parameter Name="OrdenarPor" Type="nvarchar" Mode="In" />
+          <Parameter Name="Descendente" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Usuario_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdUsuario" Type="int" Mode="In" />
+          <Parameter Name="RolID" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Apellido" Type="nvarchar" Mode="In" />
+          <Parameter Name="Username" Type="nvarchar" Mode="In" />
+          <Parameter Name="Clave" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Usuario_CambiarEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdUsuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Usuario_Insertar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RolID" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Apellido" Type="nvarchar" Mode="In" />
+          <Parameter Name="Username" Type="nvarchar" Mode="In" />
+          <Parameter Name="Clave" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Usuario_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Filtro" Type="nvarchar" Mode="In" />
+          <Parameter Name="RolID" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_ValidarLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Username" Type="nvarchar" Mode="In" />
           <Parameter Name="Password" Type="nvarchar" Mode="In" />
@@ -1437,16 +1543,122 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' does not h
             <Parameter Name="Descripcion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_Categoria_Buscar" ReturnType="Collection(BDSIGIVModel.sp_Categoria_Buscar_Result)">
-            <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+          <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_Categoria_Eliminar" ReturnType="Collection(Boolean)">
-            <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+          <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_Categoria_Insertar" ReturnType="Collection(Int32)">
             <Parameter Name="Nombre" Mode="In" Type="String" />
             <Parameter Name="Descripcion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_Categoria_Listar" ReturnType="Collection(BDSIGIVModel.sp_Categoria_Listar_Result)">
+            <Parameter Name="Filtro" Mode="In" Type="String" />
+            <Parameter Name="OrdenarPor" Mode="In" Type="String" />
+            <Parameter Name="Descendente" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Permiso_ListarPorRol" ReturnType="Collection(String)">
+          <Parameter Name="RolID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Rol_Listar" ReturnType="Collection(BDSIGIVModel.sp_Rol_Listar_Result)" />
+          <FunctionImport Name="sp_SubCategoria_Actualizar" ReturnType="Collection(Boolean)">
+            <Parameter Name="IdSubcategoria" Mode="In" Type="Int32" />
+            <Parameter Name="CategoriaID" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SubCategoria_Buscar" ReturnType="Collection(BDSIGIVModel.sp_SubCategoria_Buscar_Result)">
+          <Parameter Name="IdSubcategoria" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SubCategoria_Eliminar" ReturnType="Collection(Boolean)">
+          <Parameter Name="IdSubcategoria" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SubCategoria_Insertar" ReturnType="Collection(Int32)">
+            <Parameter Name="CategoriaID" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SubCategoria_Listar" ReturnType="Collection(BDSIGIVModel.sp_SubCategoria_Listar_Result)">
+            <Parameter Name="Filtro" Mode="In" Type="String" />
+            <Parameter Name="OrdenarPor" Mode="In" Type="String" />
+            <Parameter Name="Descendente" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Usuario_Actualizar" ReturnType="Collection(Boolean)">
+            <Parameter Name="IdUsuario" Mode="In" Type="Int32" />
+            <Parameter Name="RolID" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido" Mode="In" Type="String" />
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="Clave" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Usuario_CambiarEstado" ReturnType="Collection(Boolean)">
+          <Parameter Name="IdUsuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Usuario_Insertar" ReturnType="Collection(Int32)">
+            <Parameter Name="RolID" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido" Mode="In" Type="String" />
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="Clave" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Usuario_Listar" ReturnType="Collection(BDSIGIVModel.sp_Usuario_Listar_Result)">
+            <Parameter Name="Filtro" Mode="In" Type="String" />
+            <Parameter Name="RolID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Proveedor_Actualizar" ReturnType="Collection(Boolean)">
+            <Parameter Name="IdProveedor" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Proveedor_Buscar" ReturnType="Collection(BDSIGIVModel.sp_Proveedor_Buscar_Result)">
+          <Parameter Name="IdProveedor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Proveedor_Eliminar" ReturnType="Collection(Boolean)">
+          <Parameter Name="IdProveedor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Proveedor_Insertar" ReturnType="Collection(Int32)">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Proveedor_Listar" ReturnType="Collection(BDSIGIVModel.sp_Proveedor_Listar_Result)">
+            <Parameter Name="Filtro" Mode="In" Type="String" />
+            <Parameter Name="OrdenarPor" Mode="In" Type="String" />
+            <Parameter Name="Descendente" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Producto_Actualizar" ReturnType="Collection(Boolean)">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+            <Parameter Name="CategoriaID" Mode="In" Type="Int32" />
+            <Parameter Name="SubCategoriaID" Mode="In" Type="Int32" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="PrecioCompra" Mode="In" Type="Decimal" />
+            <Parameter Name="PrecioVenta" Mode="In" Type="Decimal" />
+            <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Producto_Buscar" ReturnType="Collection(BDSIGIVModel.sp_Producto_Buscar_Result)">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Producto_Eliminar" ReturnType="Collection(Boolean)">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Producto_Insertar" ReturnType="Collection(Int32)">
+            <Parameter Name="CategoriaID" Mode="In" Type="Int32" />
+            <Parameter Name="SubCategoriaID" Mode="In" Type="Int32" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="PrecioCompra" Mode="In" Type="Decimal" />
+            <Parameter Name="PrecioVenta" Mode="In" Type="Decimal" />
+            <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Producto_Listar" ReturnType="Collection(BDSIGIVModel.sp_Producto_Listar_Result)">
             <Parameter Name="Filtro" Mode="In" Type="String" />
             <Parameter Name="OrdenarPor" Mode="In" Type="String" />
             <Parameter Name="Descendente" Mode="In" Type="Boolean" />
@@ -1496,6 +1708,87 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' does not h
           <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="255" />
           <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_Rol_Listar_Result">
+          <Property Type="Int32" Name="IdRol" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_SubCategoria_Buscar_Result">
+          <Property Type="Int32" Name="IdSubcategoria" Nullable="false" />
+          <Property Type="Int32" Name="CategoriaID" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+          <Property Type="String" Name="NombreCategoria" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_SubCategoria_Listar_Result">
+          <Property Type="Int32" Name="IdSubcategoria" Nullable="false" />
+          <Property Type="Int32" Name="CategoriaID" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+          <Property Type="String" Name="NombreCategoria" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_Usuario_Listar_Result">
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int32" Name="RolID" Nullable="false" />
+          <Property Type="String" Name="Rol" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Clave" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="20" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_Proveedor_Buscar_Result">
+          <Property Type="Int32" Name="IdProveedor" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_Proveedor_Listar_Result">
+          <Property Type="Int32" Name="IdProveedor" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_Producto_Buscar_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="Int32" Name="SubCategoriaID" Nullable="false" />
+          <Property Type="Int32" Name="CategoriaID" Nullable="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="PrecioCompra" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="PrecioVenta" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="StockActual" Nullable="false" />
+          <Property Type="Int32" Name="StockMinimo" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="String" Name="NombreCategoria" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="NombreSubcategoria" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="EstadoStock" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_Producto_Listar_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="Int32" Name="SubCategoriaID" Nullable="false" />
+          <Property Type="Int32" Name="CategoriaID" Nullable="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="PrecioCompra" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="PrecioVenta" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="StockActual" Nullable="false" />
+          <Property Type="Int32" Name="StockMinimo" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="String" Name="NombreCategoria" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="NombreSubcategoria" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="EstadoStock" Nullable="true" MaxLength="10" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1804,6 +2097,132 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' does not h
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Permiso_ListarPorRol" FunctionName="BDSIGIVModel.Store.sp_Permiso_ListarPorRol" />
+          <FunctionImportMapping FunctionImportName="sp_Rol_Listar" FunctionName="BDSIGIVModel.Store.sp_Rol_Listar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_Rol_Listar_Result">
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SubCategoria_Actualizar" FunctionName="BDSIGIVModel.Store.sp_SubCategoria_Actualizar" />
+          <FunctionImportMapping FunctionImportName="sp_SubCategoria_Buscar" FunctionName="BDSIGIVModel.Store.sp_SubCategoria_Buscar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_SubCategoria_Buscar_Result">
+                <ScalarProperty Name="IdSubcategoria" ColumnName="IdSubcategoria" />
+                <ScalarProperty Name="CategoriaID" ColumnName="CategoriaID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SubCategoria_Eliminar" FunctionName="BDSIGIVModel.Store.sp_SubCategoria_Eliminar" />
+          <FunctionImportMapping FunctionImportName="sp_SubCategoria_Insertar" FunctionName="BDSIGIVModel.Store.sp_SubCategoria_Insertar" />
+          <FunctionImportMapping FunctionImportName="sp_SubCategoria_Listar" FunctionName="BDSIGIVModel.Store.sp_SubCategoria_Listar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_SubCategoria_Listar_Result">
+                <ScalarProperty Name="IdSubcategoria" ColumnName="IdSubcategoria" />
+                <ScalarProperty Name="CategoriaID" ColumnName="CategoriaID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Usuario_Actualizar" FunctionName="BDSIGIVModel.Store.sp_Usuario_Actualizar" />
+          <FunctionImportMapping FunctionImportName="sp_Usuario_CambiarEstado" FunctionName="BDSIGIVModel.Store.sp_Usuario_CambiarEstado" />
+          <FunctionImportMapping FunctionImportName="sp_Usuario_Insertar" FunctionName="BDSIGIVModel.Store.sp_Usuario_Insertar" />
+          <FunctionImportMapping FunctionImportName="sp_Usuario_Listar" FunctionName="BDSIGIVModel.Store.sp_Usuario_Listar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_Usuario_Listar_Result">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="RolID" ColumnName="RolID" />
+                <ScalarProperty Name="Rol" ColumnName="Rol" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Proveedor_Actualizar" FunctionName="BDSIGIVModel.Store.sp_Proveedor_Actualizar" />
+          <FunctionImportMapping FunctionImportName="sp_Proveedor_Buscar" FunctionName="BDSIGIVModel.Store.sp_Proveedor_Buscar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_Proveedor_Buscar_Result">
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Proveedor_Eliminar" FunctionName="BDSIGIVModel.Store.sp_Proveedor_Eliminar" />
+          <FunctionImportMapping FunctionImportName="sp_Proveedor_Insertar" FunctionName="BDSIGIVModel.Store.sp_Proveedor_Insertar" />
+          <FunctionImportMapping FunctionImportName="sp_Proveedor_Listar" FunctionName="BDSIGIVModel.Store.sp_Proveedor_Listar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_Proveedor_Listar_Result">
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Producto_Actualizar" FunctionName="BDSIGIVModel.Store.sp_Producto_Actualizar" />
+          <FunctionImportMapping FunctionImportName="sp_Producto_Buscar" FunctionName="BDSIGIVModel.Store.sp_Producto_Buscar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_Producto_Buscar_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="SubCategoriaID" ColumnName="SubCategoriaID" />
+                <ScalarProperty Name="CategoriaID" ColumnName="CategoriaID" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PrecioCompra" ColumnName="PrecioCompra" />
+                <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+                <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+                <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+                <ScalarProperty Name="NombreSubcategoria" ColumnName="NombreSubcategoria" />
+                <ScalarProperty Name="EstadoStock" ColumnName="EstadoStock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Producto_Eliminar" FunctionName="BDSIGIVModel.Store.sp_Producto_Eliminar" />
+          <FunctionImportMapping FunctionImportName="sp_Producto_Insertar" FunctionName="BDSIGIVModel.Store.sp_Producto_Insertar" />
+          <FunctionImportMapping FunctionImportName="sp_Producto_Listar" FunctionName="BDSIGIVModel.Store.sp_Producto_Listar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDSIGIVModel.sp_Producto_Listar_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="SubCategoriaID" ColumnName="SubCategoriaID" />
+                <ScalarProperty Name="CategoriaID" ColumnName="CategoriaID" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PrecioCompra" ColumnName="PrecioCompra" />
+                <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+                <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+                <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+                <ScalarProperty Name="NombreSubcategoria" ColumnName="NombreSubcategoria" />
+                <ScalarProperty Name="EstadoStock" ColumnName="EstadoStock" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

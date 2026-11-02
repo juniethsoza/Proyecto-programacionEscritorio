@@ -98,6 +98,7 @@
     <Compile Include="Producto.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProductoDatos.cs" />
     <Compile Include="ProductoSolicitado.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -105,6 +106,7 @@
     <Compile Include="Proveedor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDatos.cs" />
     <Compile Include="Rol.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -129,12 +131,37 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_Producto_Buscar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Producto_Listar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Proveedor_Buscar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Proveedor_Listar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Rol_Listar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_SubCategoria_Buscar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_SubCategoria_Listar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Usuario_Listar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_ValidarLogin_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SubCategoria.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SubCategoriaDatos.cs" />
     <Compile Include="Usuario.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
