@@ -175,8 +175,8 @@
           <Property Name="CreatedAt" Type="datetime2" Precision="7" />
           <Property Name="Estado" Type="bit" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_ComprasResumen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_acfdc6_bdsigiv.dbo.vw_ComprasResumen' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vw_ComprasResumen">
           <Key>
             <PropertyRef Name="IdCompra" />
@@ -192,8 +192,8 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_ComprasResumen' does not 
           <Property Name="Comprador" Type="nvarchar" MaxLength="201" Nullable="false" />
           <Property Name="Total" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_MovimientosInventario' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_acfdc6_bdsigiv.dbo.vw_MovimientosInventario' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vw_MovimientosInventario">
           <Key>
             <PropertyRef Name="MovimientoID" />
@@ -219,8 +219,8 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_MovimientosInventario' do
           <Property Name="Registrado" Type="nvarchar" MaxLength="201" Nullable="false" />
           <Property Name="Fecha" Type="datetime2" Precision="7" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_ProductosDetalle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_acfdc6_bdsigiv.dbo.vw_ProductosDetalle' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vw_ProductosDetalle">
           <Key>
             <PropertyRef Name="IdProducto" />
@@ -246,8 +246,8 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_ProductosDetalle' does no
           <Property Name="StockMinimo" Type="int" Nullable="false" />
           <Property Name="EstadoStock" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_SolicitudesProductos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_acfdc6_bdsigiv.dbo.vw_SolicitudesProductos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vw_SolicitudesProductos">
           <Key>
             <PropertyRef Name="SolicitudID" />
@@ -263,8 +263,8 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_SolicitudesProductos' doe
           <Property Name="Vendedor" Type="nvarchar" MaxLength="201" Nullable="false" />
           <Property Name="Fecha" Type="datetime2" Precision="7" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_Usuarios' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_acfdc6_bdsigiv.dbo.vw_Usuarios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vw_Usuarios">
           <Key>
             <PropertyRef Name="IdUsuario" />
@@ -282,8 +282,8 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_Usuarios' does not have a
           <Property Name="Telefono" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="FechaRegistro" Type="datetime2" Precision="7" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vw_VentasResumen">
           <Key>
             <PropertyRef Name="IdFactura" />
@@ -523,10 +523,6 @@ warning 6002: The table/view 'db_acfdc6_bdsigiv.dbo.vw_VentasResumen' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fnTienePermiso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
-          <Parameter Name="idrol" Type="int" Mode="In" />
-          <Parameter Name="nombrepermiso" Type="nvarchar" Mode="In" />
-        </Function>
         <Function Name="sp_AjustarStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ProductoID" Type="int" Mode="In" />
           <Parameter Name="UsuarioID" Type="int" Mode="In" />
